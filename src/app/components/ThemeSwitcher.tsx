@@ -20,12 +20,12 @@ export function ThemeSwitcher() {
     <div className="flex">
       {theme === "light" && (
         <Button onClick={() => setTheme("dark")}>
-          <MdOutlineDarkMode className="size-8" />
+          <MdOutlineDarkMode className="button-mode" />
         </Button>
       )}
       {theme === "dark" && (
         <Button onClick={() => setTheme("light")}>
-          <CiLight className="size-8" />
+          <CiLight className="button-mode"  />
         </Button>
       )}
     </div>
