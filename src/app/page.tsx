@@ -2,6 +2,7 @@ import { ThemeProvider } from "next-themes";
 import { Header } from "./components/Header";
 import Hero from "./components/Hero";
 import { Spacing } from "./components/Spacing";
+import Intro from "./components/Intro";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
           <Header />
           <Spacing size="md" />
           <Hero />
+          <Spacing size="md" />
+          <Intro/>
         </main>
       </ThemeProvider>
     </>

@@ -44,13 +44,13 @@ export const Header = () => {
               </Button>
             </a>
             <ul className="flex justify-center items-center gap-4 px-4  max-lg:block max-lg:px-12">
-              <Navbar title="Intro" onClick={() => setIsOpen(false)} />
+              <Navbar title="intro" onClick={() => setIsOpen(false)} />
               <div className="dot" />
-              <Navbar title="Projects" onClick={() => setIsOpen(false)} />
+              <Navbar title="projects" onClick={() => setIsOpen(false)} />
               <div className="dot" />
-              <Navbar title="Compétences" onClick={() => setIsOpen(false)} />
+              <Navbar title="compétences" onClick={() => setIsOpen(false)} />
               <div className="dot" />
-              <Navbar title="Contact" onClick={() => setIsOpen(false)} />
+              <Navbar title="contact" onClick={() => setIsOpen(false)} />
             </ul>
             <ThemeSwitcher />
           </nav>
