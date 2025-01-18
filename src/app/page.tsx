@@ -1,7 +1,7 @@
 import { ThemeProvider } from "next-themes";
 import { Header } from "./components/Header";
 import Hero from "./components/Hero";
-import { Spacing } from "./components/Spacing";
+import { Spacing } from "../layout/Spacing";
 import Intro from "./components/Intro";
 
 export default function Home() {
