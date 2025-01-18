@@ -1,13 +1,23 @@
 "use client";
 
+import { MenuSvg } from "@/components/ui/MenuSvg";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { Button } from "@/components/ui/button";
 import clsx from "clsx";
+// import Image from "next/image";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    if (isOpen) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
+  };
 
   const Navbar = ({
     title,
@@ -33,8 +43,8 @@ export const Header = () => {
         {/* menu  */}
         <div
           className={clsx(
-            "w-full max-lg:bg-background max-lg:opacity-0",
-            isOpen ? "max-lg:opacity-100" : "max-lg:pointer-events-none"
+            "w-ful max-lg:bg-background max-lg:hidden",
+            isOpen ? "max-lg:block" : "max-lg:pointer-events-none"
           )}
         >
           <nav className="max-lg:relative max-lg:z-20 max-lg:my-auto flex justify-between items-center">
@@ -43,7 +53,7 @@ export const Header = () => {
                 <FaGithub className="button-github" />
               </Button>
             </a>
-            <ul className="flex justify-center items-center gap-4 px-4  max-lg:block max-lg:px-12">
+            <ul className="flex justify-center items-center gap-4 px-4 max-md:block max-lg:px-12">
               <Navbar title="intro" onClick={() => setIsOpen(false)} />
               <div className="dot" />
               <Navbar title="projects" onClick={() => setIsOpen(false)} />
@@ -55,6 +65,11 @@ export const Header = () => {
             <ThemeSwitcher />
           </nav>
         </div>
+
+        {/* hamburger button  */}
+        <Button className="ml-auto lg:hidden px-3  rounded-tr-[8px]" onClick={toggleMenu}>
+          <MenuSvg openNavigation={isOpen} />
+        </Button>
       </div>
     </header>
   );
