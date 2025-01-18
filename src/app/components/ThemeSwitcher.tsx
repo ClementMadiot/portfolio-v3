@@ -6,7 +6,7 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 import { Button } from "@/components/ui/button";
 
-export function ThemeSwitcher() {
+export function ThemeSwitcher({ className }: { className: string }) {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -17,15 +17,21 @@ export function ThemeSwitcher() {
   if (!mounted) return null;
 
   return (
-    <div className="flex">
+    <div className={`${className}`}>
       {theme === "light" && (
-        <Button onClick={() => setTheme("dark")}>
-          <MdOutlineDarkMode className="button-mode" />
+        <Button
+          className="text-primary/80 hover:text-primary duration-300"
+          onClick={() => setTheme("dark")}
+        >
+          <MdOutlineDarkMode className="button" />
         </Button>
       )}
       {theme === "dark" && (
-        <Button onClick={() => setTheme("light")}>
-          <CiLight className="button-mode"  />
+        <Button
+          className="text-primary/80 hover:text-primary duration-300"
+          onClick={() => setTheme("light")}
+        >
+          <CiLight className="button-mode" />
         </Button>
       )}
     </div>

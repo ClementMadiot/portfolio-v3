@@ -189,7 +189,7 @@ const ContactCard = (props: {
 }) => {
   return (
     <Link href={props.url} target="_blank" className="w-full hover:bg-accent/50 transition-colors rounded-[10px]">
-    <Card className="p-3 bg-accent/10 flex items-center gap-4 cursor-pointer">
+    <Card id="contact" className="p-3 bg-accent/10 flex items-center gap-4 cursor-pointer">
       <div className="flex relative">
         <Image
           src={props.image}
