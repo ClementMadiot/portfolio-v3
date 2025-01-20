@@ -11,12 +11,14 @@ export const MenuSvg = ({ openNavigation }: HamburgerMenuProps) => {
       viewBox="0 0 20 12"
     >
       <rect
-        className={`transition-all origin-center ${openNavigation ? "opacity-0" : "opacity-100"}`}
+        className={`transition-all origin-center ${
+          openNavigation ? "opacity-0" : "opacity-100"
+        }`}
         y={openNavigation ? "5" : "-2"}
         width="20"
         height="2"
         rx="1"
-        fill="black"
+        fill="currentColor"
       />
       <rect
         className="transition-all origin-center"
@@ -24,7 +26,7 @@ export const MenuSvg = ({ openNavigation }: HamburgerMenuProps) => {
         width="20"
         height="2"
         rx="1"
-        fill="black"
+        fill="currentColor"
         transform={`rotate(${openNavigation ? "45" : "0"})`}
       />
       <rect
@@ -33,9 +35,9 @@ export const MenuSvg = ({ openNavigation }: HamburgerMenuProps) => {
         width="20"
         height="2"
         rx="1"
-        fill="black"
+        fill="currentColor"
         transform={`rotate(${openNavigation ? "-45" : "0"})`}
       />
     </svg>
-  )
+  );
 };

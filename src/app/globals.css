@@ -54,9 +54,9 @@
     --destructive-foreground: 210 40% 98%;
     --ring: 212.7 26.8% 83.9%;
     --chart-1: 210 40% 98%;
-    --chart-2: 253,27%,6%;
+    --chart-2: 253, 27%, 6%;
     --chart-3: 217.2 32.6% 17.5%;
-    --chart-4: 253,22%,17%;
+    --chart-4: 253, 22%, 17%;
     --chart-5: 210 43% 98%;
     --progress: 142, 72%, 29%;
   }
@@ -71,12 +71,20 @@
 }
 
 @layer utilities {
+
   /* START of Typography */
   .base-bold {
     @apply text-[16px] font-bold leading-[24px];
   }
 
   /* END of Typography */
+
+  /* Image  */
+  .bg-outline-filter {  
+    filter: invert(1) sepia(1) saturate(1) hue-rotate(180deg) !important;
+    opacity: 0.2;
+  }
+
   /* START of Button */
 
   .button {
@@ -103,8 +111,10 @@
   }
 
   .scroll-hide {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 
   /* END of Common */

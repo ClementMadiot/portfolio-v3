@@ -1,14 +1,20 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 import { Button } from "@/components/ui/button";
 
-export function ThemeSwitcher({ className }: { className: string }) {
+export function ThemeSwitcher({
+  className,
+  theme,
+  setTheme,
+}: {
+  className: string;
+  theme: string;
+  setTheme: (theme: string) => void;
+}) {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
