@@ -61,7 +61,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full py-2 lg:bg-chart-2/90 lg:backdrop-blur-sm border-b border-chart-3 ${
+      className={`fixed top-0 left-0 z-50 w-full py-2 lg:bg-chart-2/90 lg:backdrop-blur-sm border-b border-chart-3  ${
         isOpen ? "bg-chart-2 " : "bg-chart-2/90 backdrop-blur-sm"
       }`}
     >

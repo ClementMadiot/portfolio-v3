@@ -14,6 +14,7 @@ export default function Home() {
           <Hero />
           <Spacing size="md" />
           <Intro/>
+          <Spacing size="md" />
         </main>
       </ThemeProvider>
     </>

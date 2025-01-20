@@ -1,17 +1,24 @@
-import React from "react";
-import { Section } from "./Section";
-import { Card } from "@/components/ui/card";
-import { ArrowUpRight, Bot, BrainCog, FolderCode, Upload } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  ArrowUpRight,
+  Bot,
+  BrainCog,
+  FolderCode,
+  Upload,
+  BadgeCheck,
+} from "lucide-react";
+// Component
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Section } from "./Section";
 import { GmailIcon, LinkedinIcon } from "../constants/socials";
 
 const Intro = () => {
   return (
     <Section className="flex max-lg:flex-col items-start gap-4">
       {/*  */}
-      <div id="intro" className="flex-[3] w-full flex flex-col gap-2">
+      <div id="intro" className="flex-[2] w-full flex flex-col gap-2">
         <Card className="w-full p-4 flex flex-col gap-2">
           <p className="text-lg text-muted-foreground">Side, fun projects</p>
           <div className="flex flex-col gap-4">
@@ -20,8 +27,11 @@ const Intro = () => {
             ))}
           </div>
         </Card>
-        <Card className="p-4 flex-1">
-          <p className="text-lg text-muted-foreground">Outils</p>
+        <Card className="p-[18px] flex-1">
+          <p className="text-lg text-muted-foreground pb-2">Contact</p>
+          {MY_CONTACT.map((contact, index) => (
+            <ContactCard key={index} {...contact} />
+          ))}
         </Card>
       </div>
       <div className="flex-[2] w-full flex flex-col gap-2">
@@ -34,10 +44,12 @@ const Intro = () => {
           </div>
         </Card>
         <Card className="w-full p-4 flex-1 flex flex-col gap-2">
-          <p className="text-lg text-muted-foreground">Contact</p>
-          {MY_CONTACT.map((contact, index) => (
-            <ContactCard key={index} {...contact} />
-          ))}
+          <p className="text-lg text-muted-foreground">Outils</p>
+          <div className="grid grid-cols-2 grid-rows-3 ">
+            {MY_OUTILS.map((outil, index) => (
+              <Outils key={index} {...outil} />
+            ))}
+          </div>
         </Card>
       </div>
     </Section>
@@ -188,77 +200,79 @@ const ContactCard = (props: {
   url: string;
 }) => {
   return (
-    <Link href={props.url} target="_blank" className="w-full hover:bg-accent/50 transition-colors rounded-[10px]">
-    <Card id="contact" className="p-3 bg-accent/10 flex items-center gap-4 cursor-pointer">
-      <div className="flex relative">
-        <Image
-          src={props.image}
-          alt={props.name}
-          width={40}
-          height={40}
-          className="z-0 rounded-full object-contain"
-        />
-        <props.mediumImage
-          size={16}
-          className="absolute -bottom-1 left-6 z-50 rounded-full object-contain bg-background"
-        />
-      </div>
-      <div className="flex flex-col gap-1">
-        <p className="text-sm font-semibold">{props.name}</p>
-      <p className="text-xs text-muted-foreground">{props.description}</p>
-      </div>
-      <ArrowUpRight className="ml-auto" />
-    </Card>
+    <Link
+      href={props.url}
+      target="_blank"
+      className="w-full hover:bg-accent/50 transition-colors rounded-[10px]"
+    >
+      <Card
+        id="contact"
+        className="p-3 bg-accent/10 flex items-center gap-4 cursor-pointer"
+      >
+        <div className="flex relative">
+          <Image
+            src={props.image}
+            alt={props.name}
+            width={40}
+            height={40}
+            className="z-0 rounded-full object-contain"
+          />
+          <props.mediumImage
+            size={16}
+            className="absolute -bottom-1 left-6 z-50 rounded-full object-contain bg-background"
+          />
+        </div>
+        <div className="flex flex-col gap-1">
+          <p className="sm:text-sm text-xs font-semibold">{props.name}</p>
+          <p className="text-xs text-muted-foreground">{props.description}</p>
+        </div>
+        <ArrowUpRight className="ml-auto" />
+      </Card>
     </Link>
   );
 };
 // Outils
-// const MY_OUTILS = [
-//   {
-//     image:"",
-//     title: "ChatGPT",
-//     level: "Avancé",
-//   },
-//   {
-//     image: "",
-//     title: "Figma",
-//     level: "Intermédiaire",
-//   },
-//   {
-//     image: "",
-//     title: "Copilot",
-//     level: "Avancé",
-//   },
-//   {
-//     image: "",
-//     title: "VSCode",
-//     level: "Avancé",
-//   },
-//   {
-//     image: "",
-//     title: "git",
-//     level: "Avancé",
-//   },
-// ];
-// type OutilsProps = {
-//   image: string;
-//   title: string;
-//   level: string;
-// };
-// const Outils = (props: OutilsProps) => {
-//   return (
-//     <div
-//       className="flex w-full gap-4 items-center hover:bg-accent/50 transition-colors p-2 rounded-[10px]"
-//     >
-//       <span className="bg-accent text-accent-foreground p-2 rounded-[4px]">
-//         <Image src={props.image} alt={props.title} width={16} height={16} />
-//       </span>
-//       <div className="flex items-center justify-between w-full lg:block">
-//         <p className="text-lg font-semibold">{props.title}</p>
-//         <p className="text-sm text-muted-foreground">{props.level}</p>
-//       </div>
-//     </div>
-//   );
-// };
+const MY_OUTILS = [
+  {
+    title: "ChatGPT",
+    level: "Avancé",
+  },
+  {
+    title: "Figma",
+    level: "Intermédiaire",
+  },
+  {
+    title: "Copilot",
+    level: "Avancé",
+  },
+  {
+    title: "VSCode",
+    level: "Avancé",
+  },
+  {
+    title: "git",
+    level: "Avancé",
+  },
+  {
+    title: "git",
+    level: "Avancé",
+  },
+];
+type OutilsProps = {
+  title: string;
+  level: string;
+};
+const Outils = (props: OutilsProps) => {
+  return (
+    <div className="flex w-full gap-4 items-center hover:bg-accent/50 transition-colors p-2 rounded-[10px]">
+
+      <BadgeCheck size={24} />
+      <div className="flex flex-col items-start  text-start w-full lg:block">
+        <p className="text-lg font-semibold">{props.title}</p>
+        <p className="text-sm text-muted-foreground">{props.level}</p>
+      </div>
+    </div>
+  );
+};
 
 export default Intro;
