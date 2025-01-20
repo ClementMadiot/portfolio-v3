@@ -1,8 +1,9 @@
 import { ThemeProvider } from "next-themes";
 import { Header } from "./components/Header";
-import Hero from "./components/Hero";
 import { Spacing } from "../layout/Spacing";
+import Hero from "./components/Hero";
 import Intro from "./components/Intro";
+import Skills from "./components/Skills";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <Spacing size="md" />
           <Intro/>
           <Spacing size="md" />
+          <Skills />
         </main>
       </ThemeProvider>
     </>

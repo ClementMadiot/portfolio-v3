@@ -209,7 +209,7 @@ const ContactCard = (props: {
         id="contact"
         className="p-3 bg-accent/10 flex items-center gap-4 cursor-pointer"
       >
-        <div className="flex relative">
+        <div className="flex relative z-10">
           <Image
             src={props.image}
             alt={props.name}
