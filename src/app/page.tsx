@@ -4,6 +4,7 @@ import { Spacing } from "./components/layout/Spacing";
 import Hero from "./components/Hero";
 import Intro from "./components/Intro";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
           <Spacing size="md" />
           <Skills />
           <Spacing size="md" />
-          {/* Projects  */}
+          <Projects/> 
           {/* Footer  */}
         </main>
       </ThemeProvider>

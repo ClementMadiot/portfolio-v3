@@ -72,7 +72,7 @@ export const Header = () => {
           href={"https://github.com/ClementMadiot"}
         >
           <Button className="text-primary/80 hover:text-primary duration-150">
-            <FaGithub className="button " />
+            <FaGithub className="button" />
           </Button>
         </a>
         <ThemeSwitcher
