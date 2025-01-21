@@ -1,19 +1,6 @@
-import { ComponentPropsWithoutRef } from "react";
+import { Code } from "./layout/Code";
 import { Section } from "./layout/Section";
 import Image from "next/image";
-import { cn } from "@nextui-org/react";
-
-const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
-  return (
-    <span
-      className={cn(
-        "bg-accent/80 hover:bg-accent/50  font-mono border-accent px-1 py-0.5 m-1 rounded-[5px] font-semibold",
-        className
-      )}
-      {...props}
-    />
-  );
-};
 
 const Hero = () => {
   return (

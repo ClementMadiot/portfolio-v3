@@ -17,6 +17,9 @@ export default function Home() {
           <Intro />
           <Spacing size="md" />
           <Skills />
+          <Spacing size="md" />
+          {/* Projects  */}
+          {/* Footer  */}
         </main>
       </ThemeProvider>
     </>
