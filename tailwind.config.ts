@@ -21,6 +21,7 @@ export default {
       xl: "1280px",
     },
     extend: {
+      display: ["group-hover"],
       colors: {
         p1: "#2EF2FF",
         p2: "#3C52D9",

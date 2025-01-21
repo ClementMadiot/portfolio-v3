@@ -5,13 +5,14 @@ import {
   Bot,
   BrainCog,
   FolderCode,
-  Upload,
+  Eye,
+  EyeOff,
   BadgeCheck,
 } from "lucide-react";
 // Component
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Section } from "./Section";
+import { Section } from "./layout/Section";
 import { GmailIcon, LinkedinIcon } from "../constants/socials";
 
 const Intro = () => {
@@ -19,32 +20,42 @@ const Intro = () => {
     <Section className="flex max-lg:flex-col items-start gap-4">
       {/*  */}
       <div id="intro" className="flex-[2] w-full flex flex-col gap-2">
+        {/* SIDE PROJECTS  */}
         <Card className="w-full p-4 flex flex-col gap-2">
-          <p className="text-lg text-muted-foreground">Side, fun projects</p>
+          <p className="text-lg text-muted-foreground font-semibold ">
+            Side, fun projects
+          </p>
           <div className="flex flex-col gap-4">
             {MY_EXPERIENCE.map((exp, index) => (
               <Experience key={index} {...exp} />
             ))}
           </div>
         </Card>
+        {/* CONTACT  */}
         <Card className="p-[18px] flex-1">
-          <p className="text-lg text-muted-foreground pb-2">Contact</p>
+          <p className="text-lg text-muted-foreground pb-2 font-semibold">
+            Contact
+          </p>
           {MY_CONTACT.map((contact, index) => (
             <ContactCard key={index} {...contact} />
           ))}
         </Card>
       </div>
       <div className="flex-[2] w-full flex flex-col gap-2">
+        {/* CERTIFICATION  */}
         <Card className="p-4 flex-1">
-          <p className="text-lg text-muted-foreground">Certifications</p>
+          <p className="text-lg text-muted-foreground font-semibold ">
+            Certifications
+          </p>
           <div>
             {MY_CERTIFICATION.map((cert, index) => (
               <Certification key={index} {...cert} />
             ))}
           </div>
         </Card>
+        {/* OUTIL  */}
         <Card className="w-full p-4 flex-1 flex flex-col gap-2">
-          <p className="text-lg text-muted-foreground">Outils</p>
+          <p className="text-lg text-muted-foreground font-semibold">Outils</p>
           <div className="grid grid-cols-2 grid-rows-3 ">
             {MY_OUTILS.map((outil, index) => (
               <Outils key={index} {...outil} />
@@ -80,14 +91,14 @@ const MY_EXPERIENCE = [
     progress: true,
   },
 ];
-type ExperienceProps = {
+
+const Experience = (props: {
   logo: React.ElementType;
   title: string;
   description: string;
   url: string;
   progress?: boolean;
-};
-const Experience = (props: ExperienceProps) => {
+}) => {
   return (
     <Link
       href={props.url}
@@ -142,18 +153,18 @@ const MY_CERTIFICATION = [
     url: "https://www.freecodecamp.org/certification/Clement_Madiot/front-end-development-libraries",
   },
 ];
-type CertificationProps = {
+
+const Certification = (props: {
   image: string;
   title: string;
   date: string;
   url: string;
-};
-const Certification = (props: CertificationProps) => {
+}) => {
   return (
     <Link
       href={props.url}
       target="_blank"
-      className="flex w-full gap-4 items-center hover:bg-accent/50 transition-colors p-2 rounded-[10px]"
+      className="flex w-full gap-4 items-center hover:bg-accent/50 transition-colors p-2 rounded-[10px] group"
     >
       <Image
         className="rounded-[4px] object-contain lg:w-7 lg:h-7"
@@ -169,8 +180,16 @@ const Certification = (props: CertificationProps) => {
         </div>
         <p className="text-sm text-muted-foreground">{props.date}</p>
       </div>
-      <div className="md:hidden">
-        <Upload size={18} />
+      <div className="lg:mr-4 relative">
+        <Eye
+          size={18}
+          className=" hidden group-hover:block transition-opacity duration-300 "
+        />
+
+        <EyeOff
+          size={18}
+          className=" hidden lg:block group-hover:hidden transition-opacity duration-300 "
+        />
       </div>
     </Link>
   );
@@ -207,7 +226,7 @@ const ContactCard = (props: {
     >
       <Card
         id="contact"
-        className="p-3 bg-accent/10 flex items-center gap-4 cursor-pointer"
+        className=" bg-accent/10 hover:bg-accent/50 transition-colors flex items-center gap-4 cursor-pointer mb-2 p-2"
       >
         <div className="flex relative z-10">
           <Image
@@ -258,14 +277,9 @@ const MY_OUTILS = [
     level: "Avancé",
   },
 ];
-type OutilsProps = {
-  title: string;
-  level: string;
-};
-const Outils = (props: OutilsProps) => {
+const Outils = (props: { title: string; level: string }) => {
   return (
-    <div className="flex w-full gap-4 items-center hover:bg-accent/50 transition-colors p-2 rounded-[10px]">
-
+    <div className="flex w-full gap-4 items-center p-2">
       <BadgeCheck size={24} />
       <div className="flex flex-col items-start  text-start w-full lg:block">
         <p className="text-lg font-semibold">{props.title}</p>

@@ -1,14 +1,14 @@
 "use client";
 
 import { MenuSvg } from "@/components/ui/MenuSvg";
-import { ThemeSwitcher } from "./ThemeSwitcher";
+import { ThemeSwitcher } from "./layout/ThemeSwitcher";
 import { Button } from "@/components/ui/button";
 import clsx from "clsx";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { FaGithub } from "react-icons/fa";
-import SectionSvg from "@/layout/SectionSvg";
+import SectionSvg from "./layout/SectionSvg";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,10 +21,10 @@ export const Header = () => {
     } else {
       enablePageScroll();
     }
-  
+
     return () => enablePageScroll();
   }, [isOpen]);
-  
+
   const toggleMenu = () => {
     if (isOpen) {
       setIsOpen(false);
@@ -32,7 +32,7 @@ export const Header = () => {
       setIsOpen(true);
     }
   };
-  
+
   // close menu onclick to the anchor
   const handleClick = () => {
     if (!isOpen) return;
@@ -106,15 +106,11 @@ export const Header = () => {
             <SectionSvg crossesOffset="-top-1.5 right-[15px] lg:hidden" />
             <ul className="relative block m-auto lg:flex lg:items-center lg:flex-row">
               <Navbar title="intro" handleClick={handleClick} />
-              {/* <div className="dot" /> */}
-              <Navbar title="projects" handleClick={handleClick} />
-              {/* <div className="dot" /> */}
               <Navbar title="compétences" handleClick={handleClick} />
-              {/* <div className="dot" /> */}
+              <Navbar title="projets" handleClick={handleClick} />
               <Navbar title="contact" handleClick={handleClick} />
             </ul>
           </nav>
-
         </div>
         {/* hamburger button  */}
         <Button

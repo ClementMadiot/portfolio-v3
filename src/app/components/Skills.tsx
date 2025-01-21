@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
-import { Section } from "./Section";
-import {  ReactIcon, TailwindIcon } from "../constants/socials";
+import { Section } from "./layout/Section";
+import { ReactIcon, TailwindIcon } from "../constants/socials";
 
 const skills = () => {
   return (
