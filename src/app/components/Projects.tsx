@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { projects, SlideReveal, ProjectCard } from "../constants/projectIndex";
 import { Section } from "./layout/Section";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const Projects = () => {
-  const [project, setProject] = useState<ProjectCard[]>([]);
+  const [project, setProject] = useState<typeof projects>([]);
   const [activeFilter, setActiveFilter] = useState("Favs");
   const categories = ["React", "NextJS", "Javascript"];
 
@@ -29,9 +30,15 @@ const Projects = () => {
     setActiveFilter(category);
   };
   return (
-    <Section className="gap-2">
+    <Section className="gap-4">
+      <div className="flex flex-col items-start gap-4">
+        <Badge variant={'outline'}>Projects</Badge>
+        <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-4">
+          Mes projets réalisé !
+        </h2>
+      </div>
       <motion.div
-        id="projects"
+        id="projets"
         className="flex flex-col items-center justify-center gap-4"
         whileInView={{ opacity: [0, 1] }}
         viewport={{ once: false }}
@@ -67,10 +74,10 @@ const Projects = () => {
             ))}
           </article>
           {/* projects filter  */}
-          <article className="mt-12 flex justify-center flex-wrap gap-2">
-            {project.map((item, index) => (
+          <article className="mt-12 flex flex-row justify-center gap-2 w-full">
+            {project.map((item) => (
               <SlideReveal key={item.id}>
-                <ProjectCard key={`project-${index}`} {...item} />
+                <ProjectCard key={item.id} {...item} />
               </SlideReveal>
             ))}
           </article>

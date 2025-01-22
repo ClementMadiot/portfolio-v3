@@ -1,7 +1,9 @@
+import Link from "next/link";
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 
-import { github, website } from "../../../public/index";
+// import { github, website } from "../../../public/index";
 import {
   brainwave,
   geritch,
@@ -10,7 +12,7 @@ import {
   capture,
   jadoo,
 } from "../../../public/index";
-import Link from "next/link";
+import { Card } from "@/components/ui/card";
 
 export const projects = [
   {
@@ -78,7 +80,7 @@ export const projects = [
   },
 ];
 
-export const SlideReveal = (props: { children: number }) => {
+export const SlideReveal = (props: { children: React.ReactNode }) => {
   return (
     <motion.div
       whileInView={{ opacity: [0, 1], y: [100, 0] }}
@@ -93,20 +95,22 @@ export const SlideReveal = (props: { children: number }) => {
 export const ProjectCard = (props: {
   name: string;
   desc: string;
-  image: string;
+  image: StaticImageData;
   githubLink: string;
   webSiteLink: string;
 }) => {
   return (
-    <div className="p-5 rounded-3xl bg-primary-foreground text-primary flex flex-col sm:w-[250px] max-h-[480px] w-full mb-3">
-      <div className="relative w-full h-[200px] rounded-[10px]">
-        <Image src={props.image} alt={props.name} width={200} height={180} className="rounded-[10px] w-full h-full max-w-[200px] object-contain" />
-        <article className="flex">
+    <Card className="rounded-3xl flex flex-col gap-2 w-[250px] mx-2 h-[350px] ">
+      <Link href={props.webSiteLink} target="_blank" className="rounded-[10px] w-[250px] h-[180px]  overflow-hidden">
+        <Image src={props.image} alt={props.name} width={248} height={185} className="rounded-[10px] lg:min-h-[180px]  object-contain" />
+      </Link>
+
+        <article className="relative flex">
           {/* Link web  */}
-          <Link
+          {/* <Link
             href={props.webSiteLink}
             target="_blank"
-            className="w-10 h-10 flex justify-center items-center cursor-pointer rounded-full transition-transform bg-gradient-to-r from-gray to-white"
+            className="w-10 h-10 flex justify-center items-center cursor-pointer rounded-full transition-transform"
           >
             <Image
               src={website}
@@ -115,12 +119,12 @@ export const ProjectCard = (props: {
               height={20}
               className="w-1/2 h-1/2"
             />
-          </Link>
+          </Link> */}
           {/* Link Github */}
-          <Link
+          {/* <Link
             href={props.webSiteLink}
             target="_blank"
-            className="w-10 h-10 flex justify-center items-center cursor-pointer rounded-full transition-transform bg-gradient-to-r from-gray to-black"
+            className="w-10 h-10 flex justify-center items-center cursor-pointer rounded-full transition-transform"
           >
             <Image
               src={github}
@@ -129,14 +133,13 @@ export const ProjectCard = (props: {
               height={20}
               className="w-1/2 h-1/2"
             />
-          </Link>
+          </Link> */}
         </article>
-      </div>
 
-      <div>
-        <h3>{props.name}</h3>
-        <p>{props.desc}</p>
+      <div className="flex flex-col gap-2 px-2 pb-4">
+        <h3 className="text-xl font-semibold tracking-tight text-primary">{props.name}</h3>
+        <p className="text-sm text-muted-foreground">{props.desc}</p>
       </div>
-    </div>
+    </Card>
   );
 };
