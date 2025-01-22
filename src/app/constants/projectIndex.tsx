@@ -13,6 +13,8 @@ import {
   jadoo,
 } from "../../../public/index";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FaGithub } from "react-icons/fa";
 
 export const projects = [
   {
@@ -52,7 +54,7 @@ export const projects = [
     id: 4,
     name: "Capture",
     desc: `The loading page features Smooth animations introduce our professional photography services. Stunning slides showcase client comments.`,
-    categories: "Javascript",
+    categories: "Design",
     favoris: true,
     image: capture,
     githubLink: "https://github.com/ClementMadiot/Web_Design_Capture",
@@ -62,7 +64,7 @@ export const projects = [
     id: 5,
     name: "Jadoo",
     desc: `Dynamic travel booking: Our loading page keeps users engaged while showcasing stunning client testimonials in a slide-based interface.`,
-    categories: "Javascript",
+    categories: "Design",
     favoris: false,
     image: jadoo,
     githubLink: "https://github.com/ClementMadiot/Web_Design_Jadoo",
@@ -71,8 +73,8 @@ export const projects = [
   {
     id: 6,
     name: "Foodie",
-    desc: `Fully responsive landing page built with Javascript, Foodie delivers healthy meals straight to their customers.`,
-    categories: "Javascript",
+    desc: `Fully responsive landing page built with Design, Foodie delivers healthy meals straight to their customers.`,
+    categories: "Design",
     favoris: false,
     image: foodie,
     githubLink: "https://github.com/ClementMadiot/Web_Design_Foodie_React",
@@ -101,13 +103,23 @@ export const ProjectCard = (props: {
 }) => {
   return (
     <Card className="rounded-3xl flex flex-col gap-2 w-[250px] mx-2 h-[350px] ">
-      <Link href={props.webSiteLink} target="_blank" className="rounded-[10px] w-[250px] h-[180px]  overflow-hidden">
-        <Image src={props.image} alt={props.name} width={248} height={185} className="rounded-[10px] lg:min-h-[180px]  object-contain" />
+      <Link
+        href={props.webSiteLink}
+        target="_blank"
+        className="rounded-[10px] w-[250px] h-[180px]  overflow-hidden"
+      >
+        <Image
+          src={props.image}
+          alt={props.name}
+          width={248}
+          height={185}
+          className="rounded-[10px] lg:min-h-[180px] hover:scale-105 duration-300"
+        />
       </Link>
 
-        <article className="relative flex">
-          {/* Link web  */}
-          {/* <Link
+      <article className="">
+        {/* Link web  */}
+        {/* <Link
             href={props.webSiteLink}
             target="_blank"
             className="w-10 h-10 flex justify-center items-center cursor-pointer rounded-full transition-transform"
@@ -120,8 +132,8 @@ export const ProjectCard = (props: {
               className="w-1/2 h-1/2"
             />
           </Link> */}
-          {/* Link Github */}
-          {/* <Link
+        {/* Link Github */}
+        {/* <Link
             href={props.webSiteLink}
             target="_blank"
             className="w-10 h-10 flex justify-center items-center cursor-pointer rounded-full transition-transform"
@@ -134,10 +146,41 @@ export const ProjectCard = (props: {
               className="w-1/2 h-1/2"
             />
           </Link> */}
-        </article>
+      </article>
 
       <div className="flex flex-col gap-2 px-2 pb-4">
-        <h3 className="text-xl font-semibold tracking-tight text-primary">{props.name}</h3>
+        <div className="flex justify-between mb-1">
+          <h3 className="text-xl font-semibold tracking-tight text-primary">
+            {props.name}
+          </h3>
+          <div className="flex items-center gap-2">
+          <a
+              className="z-50"
+              target="_blank"
+              href={props.webSiteLink}
+            >
+              <Button
+                size={"sm"}
+                className="text-primary/80 hover:text-primary duration-150"
+              >
+                Demo
+              </Button>
+            </a>
+            {/* github link  */}
+            <a
+              className="z-50"
+              target="_blank"
+              href={"https://github.com/ClementMadiot"}
+            >
+              <Button
+                size={"sm"}
+                className="text-primary/80 hover:text-primary duration-150"
+              >
+                <FaGithub className="button-small" />
+              </Button>
+            </a>
+          </div>
+        </div>
         <p className="text-sm text-muted-foreground">{props.desc}</p>
       </div>
     </Card>

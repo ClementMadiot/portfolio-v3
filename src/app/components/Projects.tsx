@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 const Projects = () => {
   const [project, setProject] = useState<typeof projects>([]);
   const [activeFilter, setActiveFilter] = useState("Favs");
-  const categories = ["React", "NextJS", "Javascript"];
+  const categories = ["React", "NextJS", "Design"];
 
   useEffect(() => {
     if (activeFilter === "Favs") {
@@ -32,7 +32,7 @@ const Projects = () => {
   return (
     <Section className="gap-4">
       <div className="flex flex-col items-start gap-4">
-        <Badge variant={'outline'}>Projects</Badge>
+        <Badge variant={'outline'}>Projets</Badge>
         <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-4">
           Mes projets réalisé !
         </h2>
@@ -53,7 +53,7 @@ const Projects = () => {
               className={`text-base p-1 px-4 mx-3 font-medium transition-colors ${
                 activeFilter === "Favs"
                   ? "bg-[#915eff] text-white"
-                  : "text-primary-foreground bg-primary"
+                  : "text-primary bg-background"
               }`}
             >
               Favoris
@@ -66,7 +66,7 @@ const Projects = () => {
                 className={`text-base p-1 px-4 mx-3 font-medium transition-colors ${
                   activeFilter === category
                     ? "bg-[#915eff] text-white"
-                    : "text-primary-foreground bg-primary"
+                    : "text-primary bg-background"
                 }`}
               >
                 {category}
