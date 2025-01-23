@@ -17,51 +17,58 @@ import { GmailIcon, LinkedinIcon } from "../constants/socials";
 
 const Intro = () => {
   return (
-    <Section className="flex max-lg:flex-col items-start gap-4">
-      {/*  */}
-      <div id="intro" className="flex-[2] w-full flex flex-col gap-2">
-        {/* SIDE PROJECTS  */}
-        <Card className="w-full p-4 flex flex-col gap-2">
-          <p className="text-lg text-muted-foreground font-semibold ">
-            Side, fun projects
-          </p>
-          <div className="flex flex-col gap-4">
-            {MY_EXPERIENCE.map((exp, index) => (
-              <Experience key={index} {...exp} />
-            ))}
-          </div>
-        </Card>
-        {/* CONTACT  */}
-        <Card className="p-[18px] flex-1">
-          <p className="text-lg text-muted-foreground pb-2 font-semibold">
-            Contact
-          </p>
-          {MY_CONTACT.map((contact, index) => (
-            <ContactCard key={index} {...contact} />
-          ))}
-        </Card>
+    <Section className="flex flex-col items-start gap-4">
+      <div className="flex flex-col items-start gap-4">
+        <Badge variant={"outline"}>Intro</Badge>
+        <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+        À propos de moi
+        </h2>
       </div>
-      <div className="flex-[2] w-full flex flex-col gap-2">
-        {/* CERTIFICATION  */}
-        <Card className="p-4 flex-1">
-          <p className="text-lg text-muted-foreground font-semibold ">
-            Certifications
-          </p>
-          <div>
-            {MY_CERTIFICATION.map((cert, index) => (
-              <Certification key={index} {...cert} />
+      <div className="flex max-lg:flex-col items-start gap-4">
+        <div id="intro" className="flex-[2] w-full flex flex-col gap-2">
+          {/* SIDE PROJECTS  */}
+          <Card className="w-full p-4 flex flex-col gap-2">
+            <p className="text-lg text-muted-foreground font-semibold ">
+              Side, fun projects
+            </p>
+            <div className="flex flex-col gap-4">
+              {MY_EXPERIENCE.map((exp, index) => (
+                <Experience key={index} {...exp} />
+              ))}
+            </div>
+          </Card>
+          {/* CONTACT  */}
+          <Card className="p-[18px] flex-1">
+            <p className="text-lg text-muted-foreground pb-2 font-semibold">
+              Contact
+            </p>
+            {MY_CONTACT.map((contact, index) => (
+              <ContactCard key={index} {...contact} />
             ))}
-          </div>
-        </Card>
-        {/* OUTIL  */}
-        <Card className="w-full p-4 flex-1 flex flex-col gap-2">
-          <p className="text-lg text-muted-foreground font-semibold">Outils</p>
-          <div className="grid grid-cols-2 grid-rows-3 ">
-            {MY_OUTILS.map((outil, index) => (
-              <Outils key={index} {...outil} />
-            ))}
-          </div>
-        </Card>
+          </Card>
+        </div>
+        <div className="flex-[2] w-full flex flex-col gap-2">
+          {/* CERTIFICATION  */}
+          <Card className="p-4 flex-1">
+            <p className="text-lg text-muted-foreground font-semibold ">
+              Certifications
+            </p>
+            <div>
+              {MY_CERTIFICATION.map((cert, index) => (
+                <Certification key={index} {...cert} />
+              ))}
+            </div>
+          </Card>
+          {/* OUTIL  */}
+          <Card className="w-full p-4 flex-1 flex flex-col gap-2">
+            <p className="text-lg text-muted-foreground font-semibold">Outils</p>
+            <div className="grid grid-cols-2 grid-rows-3 ">
+              {MY_OUTILS.map((outil, index) => (
+                <Outils key={index} {...outil} />
+              ))}
+            </div>
+          </Card>
+        </div>
       </div>
     </Section>
   );

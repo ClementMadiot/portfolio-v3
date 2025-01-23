@@ -44,13 +44,14 @@ const Projects = () => {
         viewport={{ once: false }}
         transition={{ duration: 1.5, delay: 0.25 }}
       >
-        <div className="w-full flex flex-col">
+        <div className="w-full flex flex-col ">
+          
           {/* button filter */}
-          <article className=" flex justify-center gap-2 mb-8">
+          <article className=" flex justify-center flex-wrap gap-2 md:gap-6 mb-8 ">
             {/* button "Favs"  */}
             <Button
               onClick={() => handleFilter("Favs")}
-              className={`text-base p-1 px-4 mx-3 font-medium transition-colors ${
+              className={`text-base py-1 px-2 md:px-4 font-medium transition-colors ${
                 activeFilter === "Favs"
                   ? "bg-[#915eff] text-white"
                   : "text-primary bg-background"
@@ -63,7 +64,7 @@ const Projects = () => {
               <Button
                 key={category}
                 onClick={() => handleFilter(category)}
-                className={`text-base p-1 px-4 mx-3 font-medium transition-colors ${
+                className={`text-base p-1 px-2 md:px-4 font-medium transition-colors ${
                   activeFilter === category
                     ? "bg-[#915eff] text-white"
                     : "text-primary bg-background"
@@ -74,7 +75,7 @@ const Projects = () => {
             ))}
           </article>
           {/* projects filter  */}
-          <article className="mt-12 flex flex-row justify-center gap-2 w-full">
+          <article className="mt-12 flex flex-col md:flex-row md:flex-wrap justify-center gap-4 md:gap-2 m-auto">
             {project.map((item) => (
               <SlideReveal key={item.id}>
                 <ProjectCard key={item.id} {...item} />

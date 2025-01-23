@@ -2,8 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
-
-// import { github, website } from "../../../public/index";
 import {
   brainwave,
   geritch,
@@ -15,6 +13,7 @@ import {
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa";
+import { useIsDesktop } from "../components/layout/customHook";
 
 export const projects = [
   {
@@ -83,11 +82,12 @@ export const projects = [
 ];
 
 export const SlideReveal = (props: { children: React.ReactNode }) => {
+  const isDesktop = useIsDesktop();
   return (
     <motion.div
-      whileInView={{ opacity: [0, 1], y: [100, 0] }}
-      viewport={{ once: false }}
-      transition={{ duration: 0.5, delay: 0.25 }}
+      whileInView={isDesktop ? { opacity: [0, 1], y: [100, 0] } : {}}
+      viewport={isDesktop ? { once: false } : {}}
+      transition={isDesktop ? { duration: 0.5, delay: 0.25 } : {}}
     >
       {props.children}
     </motion.div>
@@ -101,6 +101,7 @@ export const ProjectCard = (props: {
   githubLink: string;
   webSiteLink: string;
 }) => {
+
   return (
     <Card className="rounded-3xl flex flex-col gap-2 w-[250px] mx-2 h-[350px] ">
       <Link
@@ -154,11 +155,7 @@ export const ProjectCard = (props: {
             {props.name}
           </h3>
           <div className="flex items-center gap-2">
-          <a
-              className="z-50"
-              target="_blank"
-              href={props.webSiteLink}
-            >
+            <a className="z-50" target="_blank" href={props.webSiteLink}>
               <Button
                 size={"sm"}
                 className="text-primary/80 hover:text-primary duration-150"
