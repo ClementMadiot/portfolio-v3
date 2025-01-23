@@ -13,6 +13,7 @@ import {
   jadoo,
 } from "../../../public/index";
 import { Card } from "@/components/ui/card";
+import { useIsDesktop } from "../components/layout/customHook";
 
 export const projects = [
   {
@@ -81,9 +82,10 @@ export const projects = [
 ];
 
 export const SlideReveal = (props: { children: React.ReactNode }) => {
+  const isDesktop = useIsDesktop()
   return (
     <motion.div
-      whileInView={{ opacity: [0, 1], y: [100, 0] }}
+      whileInView={isDesktop ? { opacity: [0, 1], y: [100, 0] } : {}}
       viewport={{ once: false }}
       transition={{ duration: 0.5, delay: 0.25 }}
     >

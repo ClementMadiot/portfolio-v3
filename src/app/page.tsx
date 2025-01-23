@@ -5,6 +5,8 @@ import Hero from "./components/Hero";
 import Intro from "./components/Intro";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -20,7 +22,10 @@ export default function Home() {
           <Skills />
           <Spacing size="md" />
           <Projects/> 
-          {/* Footer  */}
+          <Spacing size="md" />
+          <Contact/>
+          <Spacing size="md" />
+          <Footer/> 
         </main>
       </ThemeProvider>
     </>
