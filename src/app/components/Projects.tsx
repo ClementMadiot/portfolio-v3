@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 const Projects = () => {
   const [project, setProject] = useState<typeof projects>([]);
   const [activeFilter, setActiveFilter] = useState("Favs");
-  const categories = ["React", "NextJS", "Javascript"];
+  const categories = ["React", "NextJS", "Design"];
 
   useEffect(() => {
     if (activeFilter === "Favs") {
@@ -32,7 +32,7 @@ const Projects = () => {
   return (
     <Section className="gap-4">
       <div className="flex flex-col items-start gap-4">
-        <Badge variant={'outline'}>Projects</Badge>
+        <Badge variant={'outline'}>Projets</Badge>
         <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-4">
           Mes projets réalisé !
         </h2>
@@ -44,7 +44,8 @@ const Projects = () => {
         viewport={{ once: false }}
         transition={{ duration: 1.5, delay: 0.25 }}
       >
-        <div className="w-full flex flex-col">
+        <div className="w-full flex flex-col ">
+          
           {/* button filter */}
           <article className="flex justify-center flex-wrap gap-2 ">
             {/* button "Favs"  */}
@@ -53,7 +54,7 @@ const Projects = () => {
               className={`text-base py-1 px-2 sm:px-4 font-medium transition-colors ${
                 activeFilter === "Favs"
                   ? "bg-[#915eff] text-white"
-                  : "text-primary-foreground bg-primary"
+                  : "text-primary bg-background"
               }`}
             >
               Favoris
@@ -66,7 +67,7 @@ const Projects = () => {
                 className={`text-base py-1 px-2 sm:px-4 font-medium transition-colors ${
                   activeFilter === category
                     ? "bg-[#915eff] text-white"
-                    : "text-primary-foreground bg-primary"
+                    : "text-primary bg-background"
                 }`}
               >
                 {category}
