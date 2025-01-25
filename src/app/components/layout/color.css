@@ -1,6 +1,6 @@
 
   :root {
-    --background: hsl(0 0% 100%);
+    --background: #ffffff;
     /* Light mode background */
     --foreground: hsl(210 12% 16%);
     --muted: hsl(0 12% 90%);
@@ -11,7 +11,7 @@
     --card-foreground: hsl(210 12% 11%);
     --border: hsl(0 0% 95%);
     --input: hsl(0 0% 92%);
-    --primary: hsl(210 13% 21%);
+    --primary: hsl(210, 13%, 21%);
     --primary-foreground: hsl(210 13% 81%);
     --secondary: hsl(210 3% 75%);
     --secondary-foreground: hsl(210 3% 15%);

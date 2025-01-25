@@ -28,7 +28,7 @@ export const ContactCard = (props: {
           />
           <props.mediumImage
             size={16}
-            className="absolute -bottom-1 left-6 z-50 rounded-full object-contain bg-background"
+            className="absolute -bottom-1 left-6 z-50 rounded-full object-contain bg-background bg-[#ffffff]"
           />
         </div>
         <div className="flex flex-col gap-1">

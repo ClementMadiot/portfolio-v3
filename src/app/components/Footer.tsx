@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Section } from "./layout/Section";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer className="bg-card">
+      <Section className="py-8">
+        <p className="text-muted-foreground text-sm">©Copyright 2025. All rights reserved.</p>
+      </Section>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

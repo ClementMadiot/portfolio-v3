@@ -14,7 +14,7 @@ export default function Home() {
       <ThemeProvider>
         <main className="dark:bg-background dark:text-foreground">
           <Header />
-          <Spacing size="md" />
+          <Spacing size="lg" />
           <Hero />
           <Spacing size="sm" />
           <Intro />

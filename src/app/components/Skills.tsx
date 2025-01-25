@@ -10,7 +10,7 @@ const skills = () => {
       <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0">
         Ce que je sais faire !
       </h2>
-      <div className="flex max-md:flex-col gap-4">
+      <div className="flex max-md:flex-col gap-8">
         {MY_SKILLS.map((skill, index) => (
           <SkillSection key={index} {...skill} />
         ))}
@@ -25,7 +25,7 @@ const MY_SKILLS = [
     title: "React",
     description: (
       <>
-        Mon framework principal est <Code>React</Code>, <Code>Next.js</Code> en
+        Mon framework principal est <Code className="text-primary">React</Code>, <Code className="text-primary">Next.js</Code> en
         tant que framework backend et frontend.
       </>
     ),
@@ -37,7 +37,7 @@ const MY_SKILLS = [
     description: (
       <>
         Je peux créer une application modern en quelques secondes en utilisant
-        <Code>TailwindCSS</Code>.
+        <Code className="text-primary">TailwindCSS</Code>.
       </>
     ),
   },
@@ -58,9 +58,9 @@ type SkillProps = {
 
 const SkillSection = (props: SkillProps) => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col">
       <div className="flex items-center gap-4">
-        <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary/10 lg:h-12 lg:w-12 ">
+        <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-skillRounded lg:h-12 lg:w-12 ">
           <props.logo size={24} className={`text-primary ${props.className}`} />
         </div>
         <h3 className="mb-2 text-2xl font-semibold tracking-tight">

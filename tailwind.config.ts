@@ -23,16 +23,6 @@ export default {
     extend: {
       display: ["group-hover"],
       colors: {
-        p1: "#2EF2FF",
-        p2: "#3C52D9",
-        p3: "#C8EA80",
-        p4: "#EAEDFF",
-        p5: "#C4CBF5",
-        s1: "#080D27",
-        s2: "#0C1838",
-        s3: "#334679",
-        s4: "#1959AD",
-        s5: "#263466",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -74,6 +64,7 @@ export default {
           "5": "hsl(var(--chart-5))",
         },
         progress: "hsl(var(--progress))",
+        skillRounded: "hsl(var(--skillRounded))",
       },
       borderRadius: {
         lg: "var(--radius)",
