@@ -43,7 +43,7 @@ const Intro = () => {
               Contact
             </p>
             {MY_CONTACT.map((contact, index) => (
-              <ContactCard key={index} {...contact} />
+              <ContactCard key={index} {...contact} classDesc="sm:text-sm" />
             ))}
           </Card>
         </div>

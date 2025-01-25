@@ -15,17 +15,17 @@ const Contact = () => {
     },
     {
       image: "/assets/porfile-linkedin.jpeg",
-      mediumImage: GmailIcon,
-      name: "clementmadiot09@gmail.com",
-      description: "Mon Mail",
-      url: "mailto:clementmadiot09@gmail.com",
-    },
-    {
-      image: "/assets/porfile-linkedin.jpeg",
       mediumImage: GithubIcon,
       name: "ClementMadiot",
       description: "Mon Github",
       url: "https://github.com/ClementMadiot",
+    },
+    {
+      image: "/assets/porfile-linkedin.jpeg",
+      mediumImage: GmailIcon,
+      name: "clementmadiot09@gmail.com",
+      description: "Mon Mail",
+      url: "mailto:clementmadiot09@gmail.com",
     },
   ];
 
@@ -35,9 +35,12 @@ const Contact = () => {
       <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0">
         Je serait ravi de travailler avec vous !
       </h2>
-      <div className="flex max-md:flex-col gap-4">
+      <div
+        id="contact"
+        className="w-full px-2 flex justify-center max-md:flex-col gap-4 flex-wrap"
+      >
         {MY_CONTACT.map((contact, index) => (
-          <ContactCard key={index} {...contact} />
+          <ContactCard key={index} {...contact} classCard="mx-auto lg:max-w-[288px]" />
         ))}
       </div>
     </Section>

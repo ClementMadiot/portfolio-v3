@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
+import React from "react";
 
 export const ContactCard = (props: {
   image: string;
@@ -9,16 +10,13 @@ export const ContactCard = (props: {
   name: string;
   description: string;
   url: string;
+  classCard?: string;
+  classDesc?: string;
 }) => {
   return (
-    <Link
-      href={props.url}
-      target="_blank"
-      className="w-full hover:bg-accent/50 transition-colors rounded-[10px]"
-    >
+    <Link href={props.url} target="_blank">
       <Card
-        id="contact"
-        className=" bg-accent/10 hover:bg-accent/50 transition-colors flex items-center gap-4 cursor-pointer mb-2 p-2"
+        className={`bg-accent/10 hover:bg-accent/50 transition-colors flex items-center gap-4 cursor-pointer mb-2 p-2 ${props.classCard}`}
       >
         <div className="flex relative z-10">
           <Image
@@ -34,7 +32,9 @@ export const ContactCard = (props: {
           />
         </div>
         <div className="flex flex-col gap-1">
-          <p className="sm:text-sm text-xs font-semibold">{props.name}</p>
+          <p className={`${props.classDesc} text-xs font-semibold`}>
+            {props.name}
+          </p>
           <p className="text-xs text-muted-foreground">{props.description}</p>
         </div>
         <ArrowUpRight className="ml-auto" />
