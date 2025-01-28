@@ -106,13 +106,15 @@ export const ProjectCard = (props: {
       <Link
         href={props.webSiteLink}
         target="_blank"
-        className="rounded-[10px] w-[250px] h-[180px]  overflow-hidden"
+        className="rounded-[10px] w-[250px] h-[180px] overflow-hidden"
       >
         <Image
           src={props.image}
           alt={props.name}
           width={248}
           height={185}
+          priority
+          style={{ width: "auto", height: "auto" }}
           className="rounded-[10px] lg:min-h-[180px] hover:scale-105 duration-300 z-10"
         />
       </Link>

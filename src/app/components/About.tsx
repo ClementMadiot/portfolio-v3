@@ -205,14 +205,14 @@ const Certification = (props: {
 };
 const MY_CONTACT = [
   {
-    image: "/assets/porfile-linkedin.jpeg",
+    image: "/assets/profile.jpg",
     mediumImage: LinkedinIcon,
     name: "Clément Madiot",
     description: "Mon Linkedin",
     url: "https://www.linkedin.com/in/cl%C3%A9ment-madiot-9862b824a/",
   },
   {
-    image: "/assets/porfile-linkedin.jpeg",
+    image: "/assets/profile.jpg",
     mediumImage: GmailIcon,
     name: "clementmadiot09@gmail.com",
     description: "Mon mail",

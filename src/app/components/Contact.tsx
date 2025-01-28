@@ -7,21 +7,21 @@ import { ContactCard } from "./layout/ContactCard";
 const Contact = () => {
   const MY_CONTACT = [
     {
-      image: "/assets/porfile-linkedin.jpeg",
+      image: "/assets/profile.jpg",
       mediumImage: LinkedinIcon,
       name: "Clément Madiot",
       description: "Mon Linkedin",
       url: "https://www.linkedin.com/in/cl%C3%A9ment-madiot-9862b824a/",
     },
     {
-      image: "/assets/porfile-linkedin.jpeg",
+      image: "/assets/profile.jpg",
       mediumImage: GithubIcon,
       name: "ClementMadiot",
       description: "Mon Github",
       url: "https://github.com/ClementMadiot",
     },
     {
-      image: "/assets/porfile-linkedin.jpeg",
+      image: "/assets/profile.jpg",
       mediumImage: GmailIcon,
       name: "clementmadiot09@gmail.com",
       description: "Mon Mail",
@@ -40,7 +40,11 @@ const Contact = () => {
         className="w-full px-2 flex justify-center max-md:flex-col gap-4 flex-wrap"
       >
         {MY_CONTACT.map((contact, index) => (
-          <ContactCard key={index} {...contact} classCard="mx-auto lg:max-w-[288px]" />
+          <ContactCard
+            key={index}
+            {...contact}
+            classCard="mx-auto lg:max-w-[288px]"
+          />
         ))}
       </div>
     </Section>
