@@ -104,7 +104,9 @@ export const ProjectCard = (props: {
   return (
     <Card className="rounded-3xl flex flex-col gap-2 w-[250px] mx-2 h-[350px] mb-4 ">
       <Link
+        rel="preload"
         href={props.webSiteLink}
+        as="style"
         target="_blank"
         className="rounded-[10px] w-[250px] h-[180px] overflow-hidden"
       >
