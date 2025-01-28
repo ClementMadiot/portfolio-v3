@@ -1,4 +1,4 @@
-import { ThemeProvider } from "next-themes";
+
 import { Header } from "./components/Header";
 import { Spacing } from "./components/layout/Spacing";
 import Hero from "./components/Hero";
@@ -11,7 +11,6 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <ThemeProvider>
         <main className="dark:bg-background dark:text-foreground">
           <Header />
           <Spacing size="sm" />
@@ -23,7 +22,6 @@ export default function Home() {
           <Spacing size="md" />
           <Footer />
         </main>
-      </ThemeProvider>
     </>
   );
 }
