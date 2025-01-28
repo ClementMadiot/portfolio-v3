@@ -82,7 +82,7 @@ export const projects = [
 ];
 
 export const SlideReveal = (props: { children: React.ReactNode }) => {
-  const isDesktop = useIsDesktop()
+  const isDesktop = useIsDesktop();
   return (
     <motion.div
       whileInView={isDesktop ? { opacity: [0, 1], y: [100, 0] } : {}}
@@ -101,9 +101,8 @@ export const ProjectCard = (props: {
   githubLink: string;
   webSiteLink: string;
 }) => {
-
   return (
-    <Card className="rounded-3xl flex flex-col gap-2 w-[250px] mx-2 h-[350px] ">
+    <Card className="rounded-3xl flex flex-col gap-2 w-[250px] mx-2 h-[350px] mb-4 ">
       <Link
         href={props.webSiteLink}
         target="_blank"

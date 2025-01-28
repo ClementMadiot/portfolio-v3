@@ -47,7 +47,7 @@ const Projects = () => {
         <div className="w-full flex flex-col ">
           
           {/* button filter */}
-          <article className="flex justify-center flex-wrap gap-2 ">
+          <article className="flex justify-center flex-wrap gap-2 vsm:gap-4 sm:gap-6 ">
             {/* button "Favs"  */}
             <Button
               onClick={() => handleFilter("Favs")}
@@ -75,7 +75,7 @@ const Projects = () => {
             ))}
           </article>
           {/* projects filter  */}
-          <article className="mt-12 flex flex-col md:flex-row justify-center gap-4 md:gap-2 mx-auto ">
+          <article className="mt-12 flex flex-col flex-wrap md:flex-row justify-center gap-4 mx-auto ">
             {project.map((item) => (
               <SlideReveal key={item.id}>
                 <ProjectCard key={item.id} {...item} />

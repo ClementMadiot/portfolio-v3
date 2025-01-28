@@ -58,7 +58,7 @@ type SkillProps = {
 
 const SkillSection = (props: SkillProps) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col px-1 sm:px-0 ">
       <div className="flex items-center gap-4">
         <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-skillRounded lg:h-12 lg:w-12 ">
           <props.logo size={24} className={`text-primary ${props.className}`} />
