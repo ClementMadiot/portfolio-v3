@@ -30,7 +30,7 @@ const Projects = () => {
     setActiveFilter(category);
   };
   return (
-    <Section className="gap-4">
+    <Section id="projets" className="gap-4">
       <div className="flex flex-col items-start gap-4">
         <Badge variant={'outline'}>Projets</Badge>
         <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-4">
@@ -38,7 +38,6 @@ const Projects = () => {
         </h2>
       </div>
       <motion.div
-        id="projets"
         className="flex flex-col items-center justify-center gap-4"
         whileInView={{ opacity: [0, 1] }}
         viewport={{ once: false }}

@@ -1,11 +1,12 @@
+import { Button } from "@/components/ui/button";
 import { Code } from "./layout/Code";
 import { Section } from "./layout/Section";
 import Image from "next/image";
 
 const Hero = () => {
   return (
-    <Section className="flex flex-row max-md:flex-col items-start gap-8 md:gap-4  ">
-      <div className="flex-[3] w-full flex flex-col gap-2 lg:pt-12">
+    <Section id="intro" className="flex flex-row max-md:flex-col items-start gap-8 md:gap-4 ">
+      <div className="flex-[3] w-full flex flex-col items-start gap-2 lg:pt-12">
         <h2 className="font-caption max-vsm:text-[40px] text-5xl text-primary">
           Clément Madiot
         </h2>
@@ -16,6 +17,7 @@ const Hero = () => {
         Depuis 2 ans, je conçois des sites modernes, performants et responsives. Passionné par les technologies modernes, je me suis spécialisé dans <Code>React</Code>,{" "}
           <Code>TailwindCSS</Code> et <Code>Next.js</Code>{" "}pour créer des expériences web uniques et intuitives.
         </p>
+        <Button variant={'secondary'} className="mt-2 sm:mt-4">Mon CV</Button>
       </div>
       <div className="max-sm:hidden flex-[1] lg:flex-[2] flex justify-center items-center max-md:m-auto ml-auto pb-12">
         <Image

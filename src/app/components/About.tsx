@@ -15,17 +15,17 @@ import { GmailIcon, LinkedinIcon } from "../constants/socials";
 import { Section } from "./layout/Section";
 import { ContactCard } from "./layout/ContactCard";
 
-const Intro = () => {
+const About = () => {
   return (
-    <Section className="flex flex-col items-start gap-4">
+    <Section id="compétences" className="flex flex-col items-start gap-4">
       <div className="flex flex-col items-start gap-4">
-        <Badge variant={"outline"}>Intro</Badge>
+        <Badge variant={"outline"}>Compétences</Badge>
         <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-        À propos de moi
+          À propos de moi
         </h2>
       </div>
       <div className="flex max-lg:flex-col items-start gap-4">
-        <div id="intro" className="flex-[2] w-full flex flex-col gap-2">
+        <div className="flex-[2] w-full flex flex-col gap-2">
           {/* SIDE PROJECTS  */}
           <Card className="w-full p-4 flex flex-col gap-2">
             <p className="text-lg text-muted-foreground font-semibold ">
@@ -61,7 +61,9 @@ const Intro = () => {
           </Card>
           {/* OUTIL  */}
           <Card className="w-full p-4 flex-1 flex flex-col gap-2">
-            <p className="text-lg text-muted-foreground font-semibold">Outils</p>
+            <p className="text-lg text-muted-foreground font-semibold">
+              Outils
+            </p>
             <div className="grid grid-cols-2 grid-rows-3 ">
               {MY_OUTILS.map((outil, index) => (
                 <Outils key={index} {...outil} />
@@ -257,4 +259,4 @@ const Outils = (props: { title: string; level: string }) => {
   );
 };
 
-export default Intro;
+export default About;

@@ -2,7 +2,7 @@ import { ThemeProvider } from "next-themes";
 import { Header } from "./components/Header";
 import { Spacing } from "./components/layout/Spacing";
 import Hero from "./components/Hero";
-import Intro from "./components/Intro";
+import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -14,18 +14,14 @@ export default function Home() {
       <ThemeProvider>
         <main className="dark:bg-background dark:text-foreground">
           <Header />
-          <Spacing size="lg" />
-          <Hero />
           <Spacing size="sm" />
-          <Intro />
-          <Spacing size="md" />
+          <Hero />
+          <About />
           <Skills />
+          <Projects />
+          <Contact />
           <Spacing size="md" />
-          <Projects/> 
-          <Spacing size="md" />
-          <Contact/>
-          <Spacing size="md" />
-          <Footer/> 
+          <Footer />
         </main>
       </ThemeProvider>
     </>

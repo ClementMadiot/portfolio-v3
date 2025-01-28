@@ -87,23 +87,24 @@ export const Header = () => {
               isOpen ? "flex " : "hidden"
             } fixed top-[69px] left-0 right-0 bottom-0 lg:static lg:flex lg:mx-auto lg:bg-transparent bg-chart-2`}
           >
-            {/* line  */}
+            {/* line left  */}
             <div
               className={`lg:hidden ${
                 isOpen
-                  ? "absolute -top-8 left-5 w-[1px] h-full bg-chart-3"
+                  ? "absolute -top-8 left-[30px] w-[1px] h-full bg-chart-3"
                   : "hidden"
               }`}
             />
+            {/* line right */}
             <div
               className={`lg:hidden ${
                 isOpen
-                  ? "absolute -top-8 right-5 w-[1px] h-full bg-chart-3"
-                  : "hidden"
+                ? "absolute -top-8 right-[30px] w-[1px] h-full bg-chart-3"
+                : "hidden"
               }`}
             />
-            <SectionSvg crossesOffset="-top-1.5 left-[15px] lg:hidden" />
-            <SectionSvg crossesOffset="-top-1.5 right-[15px] lg:hidden" />
+              <SectionSvg crossesOffset="-top-1.5 right-[25px] lg:hidden" />
+            {/* <SectionSvg crossesOffset="-top-1.5 right-[15px] lg:hidden" /> */}
             <ul className="relative block m-auto lg:flex lg:items-center lg:flex-row">
               <Navbar title="intro" handleClick={handleClick} />
               <Navbar title="compétences" handleClick={handleClick} />

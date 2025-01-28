@@ -113,51 +113,20 @@ export const ProjectCard = (props: {
           alt={props.name}
           width={248}
           height={185}
-          className="rounded-[10px] lg:min-h-[180px] hover:scale-105 duration-300"
+          className="rounded-[10px] lg:min-h-[180px] hover:scale-105 duration-300 z-10"
         />
       </Link>
-
-      <article className="">
-        {/* Link web  */}
-        {/* <Link
-            href={props.webSiteLink}
-            target="_blank"
-            className="w-10 h-10 flex justify-center items-center cursor-pointer rounded-full transition-transform"
-          >
-            <Image
-              src={website}
-              alt={"website"}
-              width={20}
-              height={20}
-              className="w-1/2 h-1/2"
-            />
-          </Link> */}
-        {/* Link Github */}
-        {/* <Link
-            href={props.webSiteLink}
-            target="_blank"
-            className="w-10 h-10 flex justify-center items-center cursor-pointer rounded-full transition-transform"
-          >
-            <Image
-              src={github}
-              alt={"github"}
-              width={20}
-              height={20}
-              className="w-1/2 h-1/2"
-            />
-          </Link> */}
-      </article>
 
       <div className="flex flex-col gap-2 px-2 pb-4">
         <div className="flex justify-between mb-1">
           <h3 className="text-xl font-semibold tracking-tight text-primary">
             {props.name}
           </h3>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 z-10">
             <a className="z-50" target="_blank" href={props.webSiteLink}>
               <Button
                 size={"sm"}
-                className="text-primary/80 hover:text-primary duration-150"
+                className="text-primary/80 hover:text-primary duration-150 "
               >
                 Demo
               </Button>
