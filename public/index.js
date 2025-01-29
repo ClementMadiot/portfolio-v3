@@ -6,6 +6,7 @@ import website from "./assets/web/web.png";
 import foodie from "./assets/project/foodie.png";
 import jadoo from "./assets/project/jadoo.png";
 import capture from "./assets/project/capture.png";
+import OpenAI from "./assets/project/OpenAI.png";
 
 export {
   brainwave,
@@ -15,5 +16,6 @@ export {
   website,
   foodie,
   jadoo,
-  capture
+  capture,
+  OpenAI
 }

@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 const Projects = () => {
   const [project, setProject] = useState<typeof projects>([]);
   const [activeFilter, setActiveFilter] = useState("Favs");
-  const categories = ["React", "NextJS", "Design"];
+  const categories = ["App", "React",  "Design"];
 
   useEffect(() => {
     if (activeFilter === "Favs") {
@@ -32,7 +32,7 @@ const Projects = () => {
   return (
     <Section id="projets" className="gap-4">
       <div className="flex flex-col items-start gap-4">
-        <Badge variant={'outline'}>Projets</Badge>
+        <Badge variant={"outline"}>Projets</Badge>
         <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-4">
           Mes projets réalisé !
         </h2>
@@ -44,7 +44,6 @@ const Projects = () => {
         transition={{ duration: 1.5, delay: 0.25 }}
       >
         <div className="w-full flex flex-col ">
-          
           {/* button filter */}
           <article className="flex justify-center flex-wrap gap-2 vsm:gap-4 sm:gap-6 ">
             {/* button "Favs"  */}
@@ -73,7 +72,8 @@ const Projects = () => {
               </Button>
             ))}
           </article>
-          {/* projects filter  */}
+
+          {/* Gallery */}
           <article className="mt-12 flex flex-col flex-wrap md:flex-row justify-center gap-4 mx-auto ">
             {project.map((item) => (
               <SlideReveal key={item.id}>

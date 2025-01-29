@@ -13,13 +13,14 @@ export default function Home() {
     <>
         <main className="dark:bg-background dark:text-foreground">
           <Header />
-          <Spacing size="sm" />
+          <Spacing size="md" />
           <Hero />
           <About />
+          <Spacing size="sm" />
           <Skills />
           <Projects />
+          {/* <Spacing size="md" /> */}
           <Contact />
-          <Spacing size="md" />
           <Footer />
         </main>
     </>

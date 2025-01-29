@@ -7,9 +7,9 @@ const Hero = () => {
   return (
     <Section
       id="intro"
-      className="flex flex-row max-md:flex-col items-start gap-8 md:gap-4 "
+      className="flex flex-row max-md:flex-col items-start gap-8 md:gap-4"
     >
-      <div className="flex-[2] lg:flex-[3] w-full flex flex-col items-start gap-2 lg:pt-12">
+      <div className="flex-[2] lg:flex-[3] w-full flex flex-col items-start gap-2 pt-6 lg:pt-12">
         <h2 className="font-caption max-vsm:text-[40px] text-5xl text-primary">
           Clément Madiot
         </h2>
