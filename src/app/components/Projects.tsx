@@ -29,6 +29,7 @@ const Projects = () => {
     setProject(filterData);
     setActiveFilter(category);
   };
+
   return (
     <Section id="projets" className="gap-4">
       <div className="flex flex-col items-start gap-4">
@@ -76,8 +77,8 @@ const Projects = () => {
           {/* Gallery */}
           <article className="mt-12 flex flex-col flex-wrap md:flex-row justify-center gap-4 mx-auto ">
             {project.map((item) => (
-              <SlideReveal key={item.id}>
-                <ProjectCard key={item.id} {...item} />
+              <SlideReveal key={item.name}>
+                <ProjectCard key={item.name} {...item} />
               </SlideReveal>
             ))}
           </article>
