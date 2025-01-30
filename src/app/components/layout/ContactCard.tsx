@@ -16,7 +16,7 @@ export const ContactCard = (props: {
   return (
     <Link href={props.url} target="_blank">
       <Card
-        className={`bg-accent/10 hover:bg-accent/50 transition-colors flex items-center gap-4 cursor-pointer mb-2 p-2 ${props.classCard}`}
+        className={`bg-accent/10 hover:bg-accent/50 transition-colors flex items-center gap-4 cursor-pointer mb-2 p-2 group ${props.classCard}`}
       >
         <div className="flex relative z-10">
           <Image
@@ -32,12 +32,12 @@ export const ContactCard = (props: {
           />
         </div>
         <div className="flex flex-col gap-1">
-          <p className={`${props.classDesc} text-xs font-semibold`}>
+          <p className={`${props.classDesc} text-xs xl:text-sm font-semibold`}>
             {props.name}
           </p>
-          <p className="text-xs text-muted-foreground">{props.description}</p>
+          <p className="text-xs xl:text-sm text-muted-foreground">{props.description}</p>
         </div>
-        <ArrowUpRight className="ml-auto" />
+        <ArrowUpRight className="ml-auto group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition duration-300" />
       </Card>
     </Link>
   );

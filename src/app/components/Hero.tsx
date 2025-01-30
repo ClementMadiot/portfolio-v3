@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Code } from "./layout/Code";
 import { Section } from "./layout/Section";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -23,8 +24,9 @@ const Hero = () => {
           <Code>Next.js</Code> pour créer des expériences web uniques et
           intuitives.
         </p>
-        <Button variant={"secondary"} className="mt-2 sm:mt-4">
+        <Button variant={"secondary"} className="mt-2 sm:mt-4 lg:mt-3 py-5 md:py-6 flex group ">
           Mon CV
+          <ArrowUpRight size={21} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300"/>
         </Button>
       </div>
       <div className="max-sm:hidden flex-[1] lg:flex-[2] flex justify-center items-center max-md:m-auto ml-auto pb-12 relative w-full h-auto max-w-xs">

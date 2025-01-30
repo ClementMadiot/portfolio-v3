@@ -99,7 +99,7 @@ export const Header = () => {
         isOpen ? "bg-chart-2 " : "bg-chart-2/90 backdrop-blur-sm"
       }`}
     >
-      <div className="max-w-4xl w-full lg:px-0.5 m-auto flex items-center px-2 max-lg:py-2 gap-4  ">
+      <div className="xl:max-w-5xl lg:max-w-4xl md:max-w-2xl w-full lg:px-0.5 m-auto flex items-center px-2 max-lg:py-2 gap-4  ">
         <a
           className="z-50"
           target="_blank"

@@ -7,6 +7,9 @@ import foodie from "./assets/project/foodie.png";
 import jadoo from "./assets/project/jadoo.png";
 import capture from "./assets/project/capture.png";
 import OpenAI from "./assets/project/OpenAI.png";
+import coderscoffee from "./assets/project/coderscoffee.png";
+import xora from "./assets/project/xora.png";
+import myYoutube from "./assets/project/myYoutube.png";
 
 export {
   brainwave,
@@ -17,5 +20,8 @@ export {
   foodie,
   jadoo,
   capture,
-  OpenAI
+  OpenAI,
+  coderscoffee,
+  xora,
+  myYoutube,
 }

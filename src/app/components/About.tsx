@@ -189,15 +189,14 @@ const Certification = (props: {
         </div>
         <p className="text-sm text-muted-foreground">{props.date}</p>
       </div>
-      <div className="lg:mr-4 relative">
+      <div className="lg:mr-4 relative group">
         <Eye
           size={18}
-          className=" hidden group-hover:block transition-opacity duration-300 "
+          className="hidden group-hover:block transition-opacity duration-150 lg:absolute lg:opacity-0 lg:group-hover:opacity-100 lg:-top-[9px] lg:right-1"
         />
-
         <EyeOff
           size={18}
-          className=" hidden lg:block group-hover:hidden transition-opacity duration-300 "
+          className="hidden lg:block group-hover:hidden transition-opacity duration-150 lg:absolute lg:opacity-100 lg:group-hover:opacity-0 lg:-top-[9px] lg:right-1"
         />
       </div>
     </Link>
@@ -250,7 +249,7 @@ const MY_OUTILS = [
 const Outils = (props: { title: string; level: string }) => {
   return (
     <div className="flex w-full gap-4 items-center p-2">
-      <BadgeCheck size={24} />
+      <BadgeCheck size={24}  />
       <div className="flex flex-col items-start  text-start w-full lg:block">
         <p className="text-lg font-semibold">{props.title}</p>
         <p className="text-sm text-muted-foreground">{props.level}</p>

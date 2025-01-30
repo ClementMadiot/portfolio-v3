@@ -42,7 +42,7 @@ const Contact = () => {
           <ContactCard
             key={index}
             {...contact}
-            classCard="mx-auto lg:max-w-[288px]"
+            classCard="mx-auto "
           />
         ))}
       </div>
