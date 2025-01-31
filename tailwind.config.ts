@@ -65,6 +65,7 @@ export default {
         },
         progress: "hsl(var(--progress))",
         skillRounded: "hsl(var(--skillRounded))",
+        techs: "hsl(var(--techs))",
       },
       borderRadius: {
         lg: "var(--radius)",

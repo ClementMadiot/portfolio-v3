@@ -28,9 +28,10 @@
     --chart-2: 210 3% 95%;
     --chart-3: 0 0% 85%;
     --chart-4: 210 3% 78%;
-    --chart-5: 0 0% 100%;
+    --chart-5: 0 0% 98%;
     --progress: 142, 69%, 58%;
     --skillRounded: 210, 13%, 21%, 0.1;
+    --techs: 210, 13%, 21%, 0.8;
 
   }
 
@@ -58,9 +59,10 @@
     --chart-2: 253, 27%, 6%;
     --chart-3: 217.2 32.6% 17.5%;
     --chart-4: 253, 22%, 17%;
-    --chart-5: 210 43% 98%;
+    --chart-5: 0deg 0% 13.73%;
     --progress: 142, 72%, 29%;
     --skillRounded: 210, 13%, 35%;
+    --techs: 276.4deg 92.59% 68.24%;
   }
 
   * {
@@ -71,6 +73,32 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Scrollbar */
+* {
+  scrollbar-width: thin;
+  /* Width of the scrollbar */
+  scrollbar-color: var(--primary);
+  /* Color of the thumb and track */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--foreground);
+  /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  /* Color of the scrollbar thumb */
+  opacity: 0.6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+  /* Color of the scrollbar thumb */
+  opacity: 1;
+}
+
 
 @layer utilities {
 

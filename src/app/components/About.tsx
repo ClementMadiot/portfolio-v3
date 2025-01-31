@@ -27,7 +27,7 @@ const About = () => {
       <div className="flex max-lg:flex-col items-start gap-4">
         <div className="flex-[2] w-full flex flex-col gap-2">
           {/* SIDE PROJECTS  */}
-          <Card className="w-full p-4 flex flex-col gap-2">
+          <Card className="w-full p-4 flex flex-col gap-2 xl:gap-4">
             <p className="text-lg text-muted-foreground font-semibold ">
               Side, fun projects
             </p>
@@ -42,9 +42,11 @@ const About = () => {
             <p className="text-lg text-muted-foreground pb-2 font-semibold">
               Contact
             </p>
-            {MY_CONTACT.map((contact, index) => (
-              <ContactCard key={index} {...contact} classDesc="sm:text-sm" />
-            ))}
+            <div className="flex flex-col xl:gap-3">
+              {MY_CONTACT.map((contact, index) => (
+                <ContactCard key={index} {...contact} classDesc="sm:text-sm" />
+              ))}
+            </div>
           </Card>
         </div>
         <div className="flex-[2] w-full flex flex-col gap-2">
@@ -112,7 +114,7 @@ const Experience = (props: {
     <Link
       href={props.url}
       target="_blank"
-      className="inline-flex w-full gap-4 items-center hover:bg-accent/50 transition-colors p-2 rounded-[10px]"
+      className="inline-flex w-full gap-4 items-center hover:bg-accent/50 transition-colors p-2 xl:py-[10px] rounded-[10px]"
     >
       <span className="bg-accent text-accent-foreground p-2 rounded-[4px]">
         <props.logo size={16} />
