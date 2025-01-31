@@ -76,7 +76,7 @@ export function Modal({
               </a>
             </div>
           </div>
-          <AlertDialogDescription className="text-base text-primary font-normal py-4">
+          <AlertDialogDescription className="text-base text-primary/90 font-normal py-4">
             {desc}
           </AlertDialogDescription>
           <div className="w-full flex justify-start gap-4 flex-wrap">
