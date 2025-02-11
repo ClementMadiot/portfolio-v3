@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { SquareArrowOutUpRight, X } from "lucide-react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
+import { useEffect, useRef, useState } from "react";
 
 export function Modal({
   image,
@@ -20,8 +21,31 @@ export function Modal({
   code,
   link = "#",
 }: ProjectCardProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen);
+
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside); 
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
-    <AlertDialog>
+    <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
       <AlertDialogTrigger asChild className="w-full">
         <Image
           src={image}
@@ -33,9 +57,9 @@ export function Modal({
           className="rounded-[10px] lg:min-h-[180px] hover:scale-110 duration-300 z-10 "
         />
       </AlertDialogTrigger>
-      <AlertDialogContent>
+      <AlertDialogContent ref={modalRef}>
         <AlertDialogCancel className="absolute rounded-full p-1.5 right-3 top-2 border-none bg-background ">
-        <X />
+          <X />
         </AlertDialogCancel>
         {/* modal image  */}
         <div className="w-full flex justify-center overflow-hidden ">
@@ -82,10 +106,7 @@ export function Modal({
           <div className="w-full flex justify-start gap-4 flex-wrap">
             {techs &&
               techs.map((tech, index) => (
-                <p
-                  key={index}
-                  className="text-[15px] text-techs font-medium"
-                >
+                <p key={index} className="text-[15px] text-techs font-medium">
                   #{tech}
                 </p>
               ))}
