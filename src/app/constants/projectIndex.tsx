@@ -13,6 +13,8 @@ import {
   coderscoffee,
   xora,
   myYoutube,
+  markdown,
+  hangman,
 } from "../../../public/index";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -63,12 +65,12 @@ export const ProjectCard = (props: ProjectCardProps) => {
   // const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Card className="rounded-3xl flex flex-col gap-2 w-[290px] mx-2 h-[280px] mb-4 shadow-md bg-chart-5">
+    <Card className="rounded-3xl flex flex-col gap-2 w-[290px] mx-2 h-[230px] md:h-[245px] lg:h-[290px] mb-4 shadow-md bg-chart-5">
       <div className="rounded-[10px] w-full h-auto overflow-hidden cursor-pointer">
         <Modal {...props} />
       </div>
 
-      <div className="flex flex-col gap-2 px-2 pb-4">
+      <div className="flex flex-col gap-2 px-2 pb-2">
         <div className="flex justify-between mb-1">
           <h3 className="text-xl font-semibold tracking-tight text-primary">
             {props.name}
@@ -276,7 +278,7 @@ export const projects = [
       </>
     ),
     categories: "React",
-    techs: ["React", "TailwindCSS", "Vite", "Framer Motion"],
+    techs: ["React", "TailwindCSS", "Vite", "Framer-motion"],
     favoris: false,
     image: coderscoffee,
     code: "https://github.com/ClementMadiot/Coffee_react?tab=readme-ov-file",
@@ -324,5 +326,42 @@ export const projects = [
     image: myYoutube,
     code: "https://github.com/ClementMadiot/YouTube-clone_react",
     link: "https://myyoutube-cm.netlify.app/",
+  },
+  {
+    name: "Markdown",
+    desc: (
+      <>
+        Bienvenue dans mon projet de prise de notes avec prise en charge de Markdown et catégories ! 
+        <br />
+        <br />
+        Cette application est conçue pour vous offrir un moyen flexible et efficace d&apos;organiser et de gérer vos notes en utilisant la syntaxe Markdown.
+        <br />
+        <br />
+        Grâce à la prise en charge intégrée des catégories, vous pouvez facilement catégoriser vos notes et trouver rapidement les informations dont vous avez besoin.
+      </>
+    ),
+    categories: "App",
+    techs: ["React", "Typescript", "Bootstrap", "UUID"],
+    favoris: false,
+    image: markdown,
+    code: "https://github.com/ClementMadiot/Markdown_supported_note-TypeScript",
+    link: "https://markdown-cm.netlify.app/",
+  },
+  {
+    name: "Hangman",
+    desc: (
+      <>
+        Ce projet est un jeu du Pendu classique développé avec TypeScript, Tailwind CSS et Vite. Conçu pour offrir une expérience ludique et interactive, il permet aux joueurs de deviner des lettres pour révéler un mot caché. 
+        <br />
+        <br />
+        Le jeu est optimisé pour une expérience utilisateur fluide et réactive, s&apos;appuyant sur mon expertise en React et en TailwindCSS pour garantir un design moderne et une navigation intuitive.
+      </>
+    ),
+    categories: "App",
+    techs: ["React", "Typescript", "TailwindCSS"],
+    favoris: false,
+    image: hangman,
+    code: "https://github.com/ClementMadiot/Hangman_game-typeScript",
+    link: "https://hangman-game-cm.netlify.app/",
   },
 ];

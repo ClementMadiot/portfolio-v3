@@ -12,9 +12,9 @@ const AnekTelugu = Anek_Telugu({
 });
 
 export const metadata: Metadata = {
-  title: "Clément Madiot - Web developer",
+  title: "Clément Madiot - Développeur Web",
   description:
-    "Web developer specializing in crafting user interfaces with React, Nextjs & Tailwind CSS.",
+    "Clément Madiot est un développeur web passionné, spécialisé dans la création d'interfaces utilisateur dynamiques et réactives avec React, Next.js et Tailwind CSS. Avec un œil attentif pour le design et un engagement à fournir des expériences web de haute qualité, Clément transforme les idées en sites web interactifs et visuellement attrayants. Explorez le portfolio pour découvrir une sélection de projets innovants et en savoir plus sur l'expertise de Clément dans les technologies modernes de développement web.",
 };
 
 export default function RootLayout({

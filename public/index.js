@@ -10,6 +10,8 @@ import OpenAI from "./assets/project/OpenAI.png";
 import coderscoffee from "./assets/project/coderscoffee.png";
 import xora from "./assets/project/xora.png";
 import myYoutube from "./assets/project/myYoutube.png";
+import markdown from "./assets/project/markdown.png";
+import hangman from "./assets/project/hangman.png";
 
 export {
   brainwave,
@@ -24,4 +26,6 @@ export {
   coderscoffee,
   xora,
   myYoutube,
+  markdown,
+  hangman
 }

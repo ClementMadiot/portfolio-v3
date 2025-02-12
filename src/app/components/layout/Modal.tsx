@@ -24,14 +24,17 @@ export function Modal({
   const [isOpen, setIsOpen] = useState(false);
   console.log(isOpen);
 
+  // ref for modal
   const modalRef = useRef<HTMLDivElement>(null);
 
+  // click event outside the modal
   const handleClickOutside = (event: MouseEvent) => {
     if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
       setIsOpen(false);
     }
   };
 
+  // close modal when clicked outside
   useEffect(() => {
     if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside); 
@@ -71,14 +74,15 @@ export function Modal({
             className="w-full h-auto rounded-t-[10px] object-cover"
           />
         </div>
-
-        <div className="flex flex-col gap-2 px-2 pb-4">
-          <div className="flex justify-between mb-1 mt-4">
-            <AlertDialogTitle className="text-3xl font-semibold tracking-tight text-primary">
+        {/* modal content  */}
+        <div className="flex flex-col sm:gap-2 px-2 pb-4">
+          {/* modal header  */}
+          <div className="flex flex-col-reverse sm:flex-row justify-between sm:mb-1 sm:mt-4 gap-3 vsm:gap-2">
+            <AlertDialogTitle className="text-2xl vsm:text-3xl font-semibold tracking-tight text-primary">
               {name}
             </AlertDialogTitle>
             {/* Website link  */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center justify-end gap-4">
               <a target="_blank" href={link}>
                 <Button
                   size={"lg"}
@@ -103,7 +107,7 @@ export function Modal({
           <AlertDialogDescription className="text-base text-primary/90 font-normal py-4">
             {desc}
           </AlertDialogDescription>
-          <div className="w-full flex justify-start gap-4 flex-wrap">
+          <div className="w-full flex justify-start gap-2 vsm:gap-4 flex-wrap">
             {techs &&
               techs.map((tech, index) => (
                 <p key={index} className="text-[15px] text-techs font-medium">
