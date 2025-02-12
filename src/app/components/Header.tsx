@@ -111,7 +111,7 @@ export const Header = () => {
         </a>
         <ThemeSwitcher
           className="flex lg:hidden"
-          theme={theme || "default"}
+          theme={theme || "light"}
           setTheme={setTheme}
         />
 

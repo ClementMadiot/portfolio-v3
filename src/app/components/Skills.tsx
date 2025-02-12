@@ -36,7 +36,7 @@ const MY_SKILLS = [
     title: "TailwindCSS",
     description: (
       <>
-        Je peux créer une application modern en quelques secondes en utilisant
+        Je peux créer une application moderne en quelques secondes en utilisant
         <Code className="text-primary">TailwindCSS</Code>.
       </>
     ),

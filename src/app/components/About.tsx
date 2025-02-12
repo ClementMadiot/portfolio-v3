@@ -140,7 +140,7 @@ const MY_CERTIFICATION = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyvsq9F0YxdNyWbMGNtY_MDOgpcOhYYtZHuzXOC2jBgoOZCfujiLPuzffUjO9KdIQl54s&usqp=CAU",
     title: "Web Developper",
     date: "OpenClassrooms |  2023",
-    url: "https://brainwave-ai-cm.netlify.app/",
+    url: "https://white-avivah-23.tiiny.site/",
   },
   {
     image:

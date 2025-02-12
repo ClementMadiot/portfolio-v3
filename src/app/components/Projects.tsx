@@ -35,7 +35,7 @@ const Projects = () => {
       <div className="flex flex-col items-start gap-4">
         <Badge variant={"outline"}>Projets</Badge>
         <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-4">
-          Mes projets réalisé !
+          Mes projets réalisés !
         </h2>
       </div>
       <motion.div

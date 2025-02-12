@@ -33,7 +33,7 @@ const Contact = () => {
     <Section id="contact" className="flex flex-col items-start gap-4 pb-6 lg:pb-8">
       <Badge variant={"outline"}>Contact</Badge>
       <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-        Je serait ravi de travailler avec vous !
+        Je serais ravi de travailler avec vous !
       </h2>
       <div
         className="w-full px-2 flex justify-center max-md:flex-col gap-4 flex-wrap"

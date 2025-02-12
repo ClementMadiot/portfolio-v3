@@ -32,7 +32,7 @@ export default function RootLayout({
           "font-sans h-full bg-background text-foreground"
         )}
       >
-        <ThemeProvider defaultTheme="light"
+        <ThemeProvider
         >
           {children}
         </ThemeProvider>
