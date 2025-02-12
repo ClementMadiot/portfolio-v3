@@ -24,9 +24,11 @@ const Hero = () => {
           <Code>Next.js</Code> pour créer des expériences web uniques et
           intuitives.
         </p>
-        <Button variant={"secondary"} className="mt-2 sm:mt-4 lg:mt-3 py-5 md:py-6 flex group ">
-          Mon CV
-          <ArrowUpRight size={21} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300"/>
+        <Button variant={"secondary"} className="mt-2 sm:mt-4 lg:mt-3 py-5 md:py-6 flex group">
+          <a href="https://cvdesignr.com/p/6373b11dbacf3" target="_blank"  className="flex items-center gap-2">
+            Mon CV
+            <ArrowUpRight size={21} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300"/>
+          </a>
         </Button>
       </div>
       <div className="max-sm:hidden flex-[1] lg:flex-[2] flex justify-center items-center max-md:m-auto ml-auto pb-12 relative w-full h-auto max-w-xs">
