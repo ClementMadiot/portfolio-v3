@@ -12,6 +12,7 @@ export const ContactCard = (props: {
   url: string;
   classCard?: string;
   classDesc?: string;
+  truntract?: boolean;
 }) => {
   return (
     <Link href={props.url} target="_blank">
@@ -33,9 +34,16 @@ export const ContactCard = (props: {
         </div>
         <div className="flex flex-col gap-1">
           <p className={`${props.classDesc} text-xs xl:text-sm font-semibold`}>
-            {props.name}
+            <span className="sm:hidden">
+              {props.name.length > 16 && props.truntract === true
+                ? `${props.name.substring(0, 16)}...`
+                : props.name}
+            </span>
+            <span className="hidden sm:inline">{props.name}</span>
           </p>
-          <p className="text-xs xl:text-sm text-muted-foreground">{props.description}</p>
+          <p className="text-xs xl:text-sm text-muted-foreground">
+            {props.description}
+          </p>
         </div>
         <ArrowUpRight className="ml-auto group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition duration-300" />
       </Card>

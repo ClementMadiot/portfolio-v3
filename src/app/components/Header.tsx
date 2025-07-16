@@ -1,18 +1,15 @@
 "use client";
 
 import { MenuSvg } from "@/components/ui/MenuSvg";
-import { ThemeSwitcher } from "./layout/ThemeSwitcher";
 import { Button } from "@/components/ui/button";
 import clsx from "clsx";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { useEffect, useState, useRef } from "react";
-import { useTheme } from "next-themes";
 import { FaGithub } from "react-icons/fa";
 import SectionSvg from "./layout/SectionSvg";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
   const [isActive, setIsActive] = useState<string>("");
   const sectionsRef = useRef<{ [key: string]: IntersectionObserverEntry }>({});
 
@@ -109,11 +106,6 @@ export const Header = () => {
             <FaGithub className="button" />
           </Button>
         </a>
-        <ThemeSwitcher
-          className="flex lg:hidden"
-          theme={theme || "light"}
-          setTheme={setTheme}
-        />
 
         <div className="relative m-auto ">
           <nav
@@ -154,11 +146,6 @@ export const Header = () => {
         >
           <MenuSvg openNavigation={isOpen} />
         </Button>
-        <ThemeSwitcher
-          className="hidden lg:flex"
-          theme={theme || "default"}
-          setTheme={setTheme}
-        />
       </div>
     </header>
   );

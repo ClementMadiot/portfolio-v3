@@ -12,6 +12,9 @@ import xora from "./assets/project/xora.png";
 import myYoutube from "./assets/project/myYoutube.png";
 import markdown from "./assets/project/markdown.png";
 import hangman from "./assets/project/hangman.png";
+import storeIt from "./assets/project/storeIt.png";
+import gta6 from "./assets/project/gta6.png";
+import movieApp from "./assets/project/movieApp.png";
 
 export {
   brainwave,
@@ -27,5 +30,8 @@ export {
   xora,
   myYoutube,
   markdown,
-  hangman
+  hangman,
+  storeIt,
+  gta6,
+  movieApp,
 }

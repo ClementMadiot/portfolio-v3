@@ -17,7 +17,7 @@ import { ContactCard } from "./layout/ContactCard";
 
 const About = () => {
   return (
-    <Section id="compétences" className="flex flex-col items-start gap-4">
+    <Section id="compétences" className="flex flex-col gap-4">
       <div className="flex flex-col items-start gap-4">
         <Badge variant={"outline"}>Compétences</Badge>
         <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0">
@@ -44,7 +44,7 @@ const About = () => {
             </p>
             <div className="flex flex-col xl:gap-3">
               {MY_CONTACT.map((contact, index) => (
-                <ContactCard key={index} {...contact} classDesc="sm:text-sm" />
+                <ContactCard key={index} truntract={true} {...contact} classDesc="sm:text-sm" />
               ))}
             </div>
           </Card>
@@ -81,10 +81,10 @@ const About = () => {
 const MY_EXPERIENCE = [
   {
     logo: BrainCog,
-    title: "Brainwave",
+    title: "GTA VI",
     description:
-      "Landing page. Brainwave explore les possibilités du chat basé sur l'intelligence artificielle 🚀",
-    url: "https://brainwave-ai-cm.netlify.app/",
+      "GTA VI Landing Page Clone | Animation avec GSAP, ScrollTrigger",
+    url: "https://github.com/ClementMadiot/GTAVI_landing_react",
   },
   {
     logo: Bot,
@@ -95,10 +95,10 @@ const MY_EXPERIENCE = [
   },
   {
     logo: FolderCode,
-    title: "StoreIt",
+    title: "BookWise",
     description:
-      "Offre des fonctionnalités telles que le téléchargement, le partage et le stockage de fichiers.",
-    url: "https://github.com/ClementMadiot/StoreIt-nextjs",
+      "Fullstack App avec un admin Dashboard | Next.js, PostgreSQL, Redis, Auth.js",
+    url: "https://github.com/ClementMadiot/BookWise-nextjs-app",
     progress: true,
   },
 ];

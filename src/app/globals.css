@@ -35,7 +35,7 @@
 
   }
 
-  [data-theme="dark"] {
+  /* [data-theme="dark"] {
     --background: 221, 46%, 8%;
     --foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
@@ -63,7 +63,7 @@
     --progress: 142, 72%, 29%;
     --skillRounded: 210, 13%, 35%;
     --techs: 276.4deg 92.59% 68.24%;
-  }
+  } */
 
   * {
     @apply border-border scroll-smooth;

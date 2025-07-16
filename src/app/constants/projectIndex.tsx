@@ -15,6 +15,9 @@ import {
   myYoutube,
   markdown,
   hangman,
+  storeIt,
+  gta6,
+  movieApp,
 } from "../../../public/index";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -109,6 +112,76 @@ export const ProjectCard = (props: ProjectCardProps) => {
 };
 
 export const projects = [
+  {
+    name: "GTA VI",
+    desc: (
+      <>
+        GTA VI landing page est développée avec React et stylisée avec TailwindCSS pour un design moderne et responsive. 
+        <br />
+        <br />
+        Elle intègre des animations fluides avec GSAP via gsap-react, des effets dynamiques basés sur le scroll grâce à ScrollTrigger, et s’adapte parfaitement à tous les appareils avec react-responsive. 
+        <br />
+        <br />
+        Une expérience propre, interactive et visuellement engageante sur tous les écrans.
+      </>
+    ),
+    categories: "React",
+    techs: ["React", "GSAP", "ScrollTrigger", "TailwindCSS"],
+    favoris: true,
+    image: gta6,
+    code: "https://github.com/ClementMadiot/GTAVI_landing_react",
+    link: "https://gta-vi-landing-cm.vercel.app/",
+  },
+  {
+    name: "Movie App",
+    desc: (
+      <>
+        Movie App est une application web moderne qui permet aux utilisateurs de
+        rechercher facilement des films et d’accéder à leurs détails.
+        <br />
+        <br />
+        Développée avec React, TailwindCSS et Appwrite, elle offre une
+        expérience fluide et rapide.
+        <br />
+        <br />
+        Les fonctionnalités clés incluent une recherche optimisée avec debounce,
+        des pages film détaillées, et une navigation fluide grâce à React
+        Router.
+      </>
+    ),
+    categories: "App",
+    techs: ["React", "tmdb-api", "Appwrite", "TailwindCSS"],
+    favoris: true,
+    image: movieApp,
+    code: "https://github.com/ClementMadiot/Movie-App-React",
+    link: "https://cm-movie-app.netlify.app/",
+  },
+  {
+    name: "StoreIt",
+    desc: (
+      <>
+        Ce projet est un système de gestion de fichiers complet développé avec
+        Next.js 15 et le SDK Appwrite pour Node, exploitant des fonctionnalités
+        avancées pour une gestion fluide des fichiers.
+        <br />
+        <br />
+        Il utilise Tailwind CSS, ShadCN UI et React Dropzone pour offrir une
+        expérience utilisateur moderne et intuitive.
+        <br />
+        <br />
+        Proposant des fonctionnalités similaires à Google Drive, il inclut une
+        authentification sécurisée, l’upload et le téléchargement de fichiers,
+        le partage, ainsi qu’une recherche avancée avec des options de filtrage
+        pour une gestion efficace des fichiers.
+      </>
+    ),
+    categories: "App",
+    techs: ["NextJS", "Typescript", "Appwrite", "Shadcn/ui "],
+    favoris: true,
+    image: storeIt,
+    code: "https://github.com/ClementMadiot/StoreIt-nextjs",
+    link: "https://store-it-cm.vercel.app/sign-up",
+  },
   {
     name: "Brainwave",
     desc: (
@@ -246,12 +319,13 @@ export const projects = [
       <>
         Ce site web de résumé d&apos;articles alimenté par l&apos;IA utilise
         ChatGPT-4 pour générer instantanément des résumés concis de
-        n&apos;importe quel article en un clic. 
+        n&apos;importe quel article en un clic.
         <br />
         <br />
-        Grâce à l&apos;intégration de RapidAPI, la plateforme optimise les appels API pour une summarisation
-        rapide et précise. L&apos;interface moderne et épurée, construite avec
-        React et TailwindCSS, offre une expérience fluide à l&apos;utilisateur.
+        Grâce à l&apos;intégration de RapidAPI, la plateforme optimise les
+        appels API pour une summarisation rapide et précise. L&apos;interface
+        moderne et épurée, construite avec React et TailwindCSS, offre une
+        expérience fluide à l&apos;utilisateur.
         <br />
         <br />
         Que ce soit pour résumer des articles longs ou sauvegarder
@@ -277,7 +351,7 @@ export const projects = [
         navigation immersive.
       </>
     ),
-    categories: "React",
+    categories: "Design",
     techs: ["React", "TailwindCSS", "Vite", "Framer-motion"],
     favoris: false,
     image: coderscoffee,
@@ -311,8 +385,8 @@ export const projects = [
         utilisant React, TailwindCSS et Materialet UI (MUI).
         <br />
         <br />
-        L&apos;intégration des données a été réalisée grâce à RapidAPI et l&apos;API
-        YouTube v3
+        L&apos;intégration des données a été réalisée grâce à RapidAPI et
+        l&apos;API YouTube v3
         <br />
         <br />
         Le site propose une barre de recherche fonctionnelle, un feed dynamique
@@ -322,7 +396,7 @@ export const projects = [
     ),
     categories: "App",
     techs: ["React", "TailwindCSS", "MUI", "RapidAPI"],
-    favoris: true,
+    favoris: false,
     image: myYoutube,
     code: "https://github.com/ClementMadiot/YouTube-clone_react",
     link: "https://myyoutube-cm.netlify.app/",
@@ -331,13 +405,18 @@ export const projects = [
     name: "Markdown",
     desc: (
       <>
-        Bienvenue dans mon projet de prise de notes avec prise en charge de Markdown et catégories ! 
+        Bienvenue dans mon projet de prise de notes avec prise en charge de
+        Markdown et catégories !
         <br />
         <br />
-        Cette application est conçue pour vous offrir un moyen flexible et efficace d&apos;organiser et de gérer vos notes en utilisant la syntaxe Markdown.
+        Cette application est conçue pour vous offrir un moyen flexible et
+        efficace d&apos;organiser et de gérer vos notes en utilisant la syntaxe
+        Markdown.
         <br />
         <br />
-        Grâce à la prise en charge intégrée des catégories, vous pouvez facilement catégoriser vos notes et trouver rapidement les informations dont vous avez besoin.
+        Grâce à la prise en charge intégrée des catégories, vous pouvez
+        facilement catégoriser vos notes et trouver rapidement les informations
+        dont vous avez besoin.
       </>
     ),
     categories: "App",
@@ -351,10 +430,15 @@ export const projects = [
     name: "Hangman",
     desc: (
       <>
-        Ce projet est un jeu du Pendu classique développé avec TypeScript, Tailwind CSS et Vite. Conçu pour offrir une expérience ludique et interactive, il permet aux joueurs de deviner des lettres pour révéler un mot caché. 
+        Ce projet est un jeu du Pendu classique développé avec TypeScript,
+        Tailwind CSS et Vite. Conçu pour offrir une expérience ludique et
+        interactive, il permet aux joueurs de deviner des lettres pour révéler
+        un mot caché.
         <br />
         <br />
-        Le jeu est optimisé pour une expérience utilisateur fluide et réactive, s&apos;appuyant sur mon expertise en React et en TailwindCSS pour garantir un design moderne et une navigation intuitive.
+        Le jeu est optimisé pour une expérience utilisateur fluide et réactive,
+        s&apos;appuyant sur mon expertise en React et en TailwindCSS pour
+        garantir un design moderne et une navigation intuitive.
       </>
     ),
     categories: "App",
